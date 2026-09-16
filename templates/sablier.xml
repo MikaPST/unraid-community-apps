@@ -1,0 +1,104 @@
+<Container version="2">
+  <Name>Sablier</Name>
+  <Repository>sablierapp/sablier:1.15.0</Repository>
+  <Registry>https://hub.docker.com/r/sablierapp/sablier</Registry>
+
+  <!-- Default network for integration with Traefik.
+       Users can change this to their reverse proxy Docker network. -->
+  <Network>traefik</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- Sablier icon -->
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-sablier.png</Icon>
+
+  <!-- Sablier API -->
+  <WebUI>http://[IP]:[PORT:10000]</WebUI>
+
+  <Overview>
+    Sablier is a lightweight open-source application that automatically starts Docker containers on demand and stops them after a period of inactivity. It integrates with reverse proxies such as Traefik, Caddy and Nginx to provide scale-to-zero capabilities for Docker workloads.
+  </Overview>
+
+  <Project>https://github.com/sablierapp/sablier</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/sablier.xml</TemplateURL>
+
+  <ReadMe>https://github.com/sablierapp/sablier</ReadMe>
+
+  <Category>Tools:System</Category>
+
+  <ExtraSearchTerms>
+    sablier scale to zero docker traefik caddy nginx reverse proxy container sleep wake
+  </ExtraSearchTerms>
+
+  <Requires>
+    Docker access and a reverse proxy integration such as Traefik, Caddy or Nginx.
+  </Requires>
+
+  <Changes>
+    Initial release - Sablier 1.15.0
+  </Changes>
+
+  <Date>2026-09-16</Date>
+
+  <MinVer>6.1</MinVer>
+  <MaxVer>7.3</MaxVer>
+
+  <License>AGPL-3.0</License>
+
+  <!-- ========================================================= -->
+  <!-- SABLIER CONFIGURATION                                     -->
+  <!-- ========================================================= -->
+
+  <!-- HTTP API port -->
+  <Config
+    Name="WebUI"
+    Target="10000"
+    Default="10000"
+    Mode="tcp"
+    Description="Port used by the Sablier HTTP API."
+    Type="Port"
+    Display="advanced"
+    Required="true"
+    Mask="false"
+  />
+
+  <!-- Docker socket -->
+  <Config
+    Name="Docker Socket"
+    Target="/var/run/docker.sock"
+    Default="/var/run/docker.sock"
+    Mode="rw"
+    Description="Docker socket used by Sablier to start, stop and monitor Docker containers."
+    Type="Path"
+    Display="advanced"
+    Required="true"
+    Mask="false"
+  />
+
+  <!-- Timezone -->
+  <Config
+    Name="Timezone"
+    Target="TZ"
+    Default="Europe/Paris"
+    Description="Timezone used by the Sablier container."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- Logging level -->
+  <Config
+    Name="Log Level"
+    Target="SABLIER_LOGGING_LEVEL"
+    Default="info"
+    Description="Sablier logging level. Supported values include info, debug and error."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+</Container>
