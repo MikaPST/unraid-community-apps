@@ -214,6 +214,36 @@ dynamic:
 
 This makes it possible to customize the Sablier page displayed while an application is starting.
 
+## Sablier Theme Editor
+
+Sablier provides an official online theme editor that makes it easy to create, customize and preview Sablier themes.
+
+**Official Sablier Theme Editor:**
+
+https://editor.sablierapp.dev/
+
+Once your theme is created, you can export it and place the resulting `.html` file in the Sablier themes directory:
+
+```text
+/mnt/user/appdata/sablier/themes/
+```
+
+You can then reference the theme from your Traefik middleware configuration using the filename without the `.html` extension.
+
+For example:
+
+```text
+ghost_fr.html
+```
+
+becomes:
+
+```yaml
+dynamic:
+  theme: ghost_fr
+```
+
+
 ---
 
 # Example architecture
