@@ -103,7 +103,7 @@
   <!-- ========================= -->
 
   <Config
-    Name="WebUI"
+    Name="HTTP Port"
     Target="10000"
     Default="10000"
     Mode="tcp"
