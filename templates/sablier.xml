@@ -16,24 +16,24 @@
   <!-- Sablier API -->
   <WebUI>http://[IP]:[PORT:10000]</WebUI>
 
-  <Overview>
-    Sablier is a lightweight open-source application that automatically starts Docker containers on demand and stops them after a period of inactivity. It integrates with reverse proxies such as Traefik, Caddy and Nginx to provide scale-to-zero capabilities for Docker workloads.
-  </Overview>
+<Overview>
+    Sablier is a lightweight Docker-aware middleware that automatically starts and stops containers based on incoming requests. It integrates with reverse proxies such as Traefik and helps reduce resource consumption by stopping unused applications.
+</Overview>
 
   <Project>https://github.com/sablierapp/sablier</Project>
 
   <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/sablier.xml</TemplateURL>
 
-  <ReadMe>https://github.com/sablierapp/sablier</ReadMe>
+  <ReadMe>https://github.com/MikaPST/unraid-community-apps/blob/main/README.md</ReadMe>
 
-  <Category>Tools:System</Category>
+  <Category>Tools:Utilities</Category>
 
   <ExtraSearchTerms>
-    sablier scale to zero docker traefik caddy nginx reverse proxy container sleep wake
+    Sablier Docker Traefik middleware container sleep wake
   </ExtraSearchTerms>
 
   <Requires>
-    Docker access and a reverse proxy integration such as Traefik, Caddy or Nginx.
+    Docker socket access and a reverse proxy such as Traefik
   </Requires>
 
   <Changes>
@@ -43,61 +43,101 @@
   <Date>2026-09-16</Date>
 
   <MinVer>6.1</MinVer>
-  <MaxVer>7.3</MaxVer>
 
-  <License>AGPL-3.0</License>
+  <License>Apache-2.0</License>
 
-  <!-- ========================================================= -->
-  <!-- SABLIER CONFIGURATION                                     -->
-  <!-- ========================================================= -->
 
-  <!-- HTTP API port -->
-  <Config
-    Name="WebUI"
-    Target="10000"
-    Default="10000"
-    Mode="tcp"
-    Description="Port used by the Sablier HTTP API."
-    Type="Port"
-    Display="advanced"
-    Required="true"
-    Mask="false"
-  />
+  <!-- ========================= -->
+  <!-- DOCKER SOCKET              -->
+  <!-- ========================= -->
 
-  <!-- Docker socket -->
   <Config
     Name="Docker Socket"
     Target="/var/run/docker.sock"
     Default="/var/run/docker.sock"
     Mode="rw"
-    Description="Docker socket used by Sablier to start, stop and monitor Docker containers."
+    Description="Docker socket used by Sablier to monitor and control Docker containers."
     Type="Path"
     Display="advanced"
     Required="true"
     Mask="false"
   />
 
-  <!-- Timezone -->
+
+  <!-- ========================= -->
+  <!-- SABLIER CONFIGURATION      -->
+  <!-- ========================= -->
+
   <Config
-    Name="Timezone"
-    Target="TZ"
-    Default="Europe/Paris"
-    Description="Timezone used by the Sablier container."
-    Type="Variable"
+    Name="Sablier Configuration"
+    Target="/etc/sablier/sablier.yml"
+    Default="/mnt/user/appdata/sablier/sablier.yml"
+    Mode="rw"
+    Description="Path to the Sablier configuration file."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+
+  <!-- ========================= -->
+  <!-- SABLIER THEMES             -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Themes"
+    Target="/etc/sablier/themes"
+    Default="/mnt/user/appdata/sablier/themes"
+    Mode="rw"
+    Description="Directory containing Sablier themes."
+    Type="Path"
     Display="advanced"
     Required="false"
     Mask="false"
   />
 
-  <!-- Logging level -->
+
+  <!-- ========================= -->
+  <!-- SABLIER HTTP PORT          -->
+  <!-- ========================= -->
+
   <Config
-    Name="Log Level"
-    Target="SABLIER_LOGGING_LEVEL"
-    Default="info"
-    Description="Sablier logging level. Supported values include info, debug and error."
-    Type="Variable"
+    Name="WebUI"
+    Target="10000"
+    Default="10000"
+    Mode="tcp"
+    Description="Sablier HTTP API port."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+
+  <!-- ========================= -->
+  <!-- TRAEFIK                    -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Traefik Enabled"
+    Target="traefik.enable"
+    Default="true"
+    Description="Enable Traefik integration for Sablier."
+    Type="Label"
     Display="advanced"
-    Required="false"
+    Required="true"
+    Mask="false"
+  />
+
+  <Config
+    Name="Traefik Service Port"
+    Target="traefik.http.services.sablier.loadbalancer.server.port"
+    Default="10000"
+    Description="Internal Sablier HTTP port used by Traefik."
+    Type="Label"
+    Display="advanced"
+    Required="true"
     Mask="false"
   />
 
