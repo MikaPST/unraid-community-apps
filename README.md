@@ -1,8 +1,20 @@
-# Unraid Community Apps — MikaPST
+<div align="center">
 
-Community Applications repository maintained by **MikaPST**.
+<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon.png" alt="MikaPST Unraid Community Apps" width="160">
 
-This repository provides Docker application templates for [Unraid](https://unraid.net/), starting with **Sablier**.
+# MikaPST — Unraid Community Apps
+
+**Docker application templates for Unraid**
+
+[![Unraid](https://img.shields.io/badge/Unraid-Community%20Apps-blue?logo=unraid)](https://unraid.net/)
+[![GitHub](https://img.shields.io/badge/GitHub-MikaPST-black?logo=github)](https://github.com/MikaPST/unraid-community-apps)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+Self-hosted applications and integrations for the Unraid community.
+
+</div>
+
+---
 
 ## Applications
 
