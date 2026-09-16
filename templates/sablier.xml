@@ -10,11 +10,11 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
 
+  <!-- Startup command -->
+  <Command>start --provider.name=docker</Command>
+
   <!-- Sablier icon -->
   <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-sablier.png</Icon>
-
-  <!-- Sablier API -->
-  <WebUI>http://[IP]:[PORT:10000]</WebUI>
 
 <Overview>
     Sablier is a lightweight Docker-aware middleware that automatically starts and stops containers based on incoming requests. It integrates with reverse proxies such as Traefik and helps reduce resource consumption by stopping unused applications.
