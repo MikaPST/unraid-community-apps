@@ -1,5 +1,5 @@
 <Container version="2">
-  <Name>DockDash</Name>
+  <Name>dockdash</Name>
   <Repository>ghcr.io/dougmaitelli/dockdash:latest</Repository>
   <Registry>https://github.com/dougmaitelli/DockDash/pkgs/container/dockdash</Registry>
 
