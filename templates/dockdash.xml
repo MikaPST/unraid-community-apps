@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<Container version="2">
+
+  <Name>DockDash</Name>
+  <Repository>ghcr.io/dougmaitelli/dockdash:latest</Repository>
+  <Registry>https://github.com/dougmaitelli/DockDash/pkgs/container/dockdash</Registry>
+
+  <!-- Standard Docker network for maximum compatibility with Unraid -->
+  <Network>bridge</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- ========================= -->
+  <!-- HTTP PORT                 -->
+  <!-- ========================= -->
+
+  <Config
+    Name="HTTP Port"
+    Target="3001"
+    Default="4001"
+    Mode="tcp"
+    Description="Port used to access the DockDash web interface. DockDash listens on port 3001 inside the container."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- DOCKER SOCKET             -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Docker Socket"
+    Target="/var/run/docker.sock"
+    Default="/var/run/docker.sock"
+    Mode="rw"
+    Description="Docker socket used by DockDash to discover and manage Docker containers."
+    Type="Path"
+    Display="advanced"
+    Required="true"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- APPLICATION DATA          -->
+  <!-- ========================= -->
+
+  <Config
+    Name="DockDash Data"
+    Target="/app/data"
+    Default="/mnt/user/appdata/dockdash"
+    Mode="rw"
+    Description="Persistent directory used by DockDash to store its database and application data."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- LOG LEVEL                 -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Log Level"
+    Target="LOG_LEVEL"
+    Default="info"
+    Description="DockDash logging level. The default value is info."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- NETWORK CIDRS             -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Network CIDRs"
+    Target="NETWORK_CIDRS"
+    Default="192.168.0.1/24"
+    Description="CIDR network ranges scanned by DockDash for network service discovery. Adjust this value to match your local network."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- HEALTH CHECK              -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Health Check Interval"
+    Target="HEALTH_CHECK_INTERVAL"
+    Default="30000"
+    Description="Interval between service health checks, in milliseconds. Default: 30000."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- RESOURCE MONITOR          -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Resource Monitor Interval"
+    Target="RESOURCE_MONITOR_INTERVAL"
+    Default="5000"
+    Description="Interval between resource monitoring updates, in milliseconds. Default: 5000."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- UPDATE CHECK              -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Update Check Interval"
+    Target="UPDATE_CHECK_INTERVAL"
+    Default="3600000"
+    Description="Interval between Docker image update checks, in milliseconds. Default: 3600000 (1 hour)."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- ICON                      -->
+  <!-- ========================= -->
+
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-dockdash.png</Icon>
+
+  <!-- ========================= -->
+  <!-- DESCRIPTION               -->
+  <!-- ========================= -->
+
+  <Overview>
+    DockDash is a self-hosted dashboard for visualizing Docker containers and network services. It automatically discovers Docker services, monitors their health and resources, detects available container image updates, and displays relevant GitHub release notes and changelogs.
+
+    SECURITY WARNING: DockDash does not enforce authentication by default. Because it requires access to the Docker socket and provides powerful features such as container management, terminal access and filesystem access, the web interface must be protected before exposing it to any untrusted network or the Internet.
+
+    DockDash supports built-in OpenID Connect (OIDC) authentication with providers such as Authentik, Authelia, Keycloak and Google. Alternatively, it can be placed behind a reverse proxy such as Traefik, Caddy or Nginx with an authentication layer such as Authentik, Authelia, oauth2-proxy or another trusted solution.
+  </Overview>
+
+  <Project>https://github.com/dougmaitelli/DockDash</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/dockdash.xml</TemplateURL>
+
+  <ReadMe>https://github.com/MikaPST/unraid-community-apps/blob/main/README.md</ReadMe>
+
+  <Category>Tools:Utilities</Category>
+
+  <ExtraSearchTerms>
+    DockDash Docker Dashboard Monitoring Updates Containers Releases Changelog GitHub Network Services
+  </ExtraSearchTerms>
+
+  <Requires>
+    Docker socket access. Authentication is not enabled by default. Protect the DockDash interface with built-in OIDC or a reverse proxy authentication layer before exposing it to an untrusted network or the Internet.
+  </Requires>
+
+  <Changes>
+    Initial release - DockDash
+  </Changes>
+
+  <Date>2026-09-25</Date>
+
+  <MinVer>6.1</MinVer>
+
+  <License>AGPL-3.0</License>
+
+</Container>
