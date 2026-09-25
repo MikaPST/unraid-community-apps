@@ -37,10 +37,15 @@
   </Requires>
 
   <Changes>
-    Initial release - Sablier 1.15.0
+    Updated Sablier to 1.18.0
+    - Added systemd provider support
+    - Added NO_COLOR support
+    - Added retro waiting page theme
+    - Updated default custom themes path
+    - Various theme fixes and documentation improvements
   </Changes>
 
-  <Date>2026-09-16</Date>
+  <Date>2026-09-25</Date>
 
   <MinVer>6.1</MinVer>
 
