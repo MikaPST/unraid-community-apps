@@ -13,6 +13,9 @@
   <!-- DockDash icon -->
   <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-dockdash.png</Icon>
 
+  <!-- DockDash web interface -->
+  <WebUI>http://[IP]:[PORT:3001]/</WebUI>
+
   <Overview>
     DockDash is a self-hosted dashboard for visualizing Docker containers and network services. It automatically discovers Docker services, monitors their health and resources, detects available container image updates, and displays relevant GitHub release notes and changelogs.
 
