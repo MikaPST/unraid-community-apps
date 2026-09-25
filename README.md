@@ -60,8 +60,9 @@ The goal is to provide simple, documented and maintainable templates for useful 
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sablierapp/artwork/refs/heads/main/horizontal/sablier-horizontal-color.png" alt="SablierApp" width="250">
+  <img src="https://raw.githubusercontent.com/sablierapp/artwork/refs/heads/main/horizontal/sablier-horizontal-color.png" alt="SablierApp" width="400">
 </p>
+
 # Sablier
 
 [Sablier](https://sablierapp.dev/) is a lightweight Docker-aware middleware that can automatically start and stop containers based on incoming requests.
@@ -325,8 +326,9 @@ Traefik receives the request, the Sablier middleware checks the application stat
 ---
 
 <p align="center">
-  <img src="https://github.com/dougmaitelli/DockDash/blob/master/assets/banner.png" alt="DockDash — container and service monitoring dashboard" width="250">
+  <img src="https://github.com/dougmaitelli/DockDash/blob/master/assets/banner.png" alt="DockDash — container and service monitoring dashboard" width="400">
 </p>
+
 # DockDash
 
 [DockDash](https://github.com/dougmaitelli/DockDash) is a self-hosted dashboard for visualizing Docker containers and network services.
