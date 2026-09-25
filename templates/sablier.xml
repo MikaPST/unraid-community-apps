@@ -1,5 +1,5 @@
 <Container version="2">
-  <Name>Sablier</Name>
+  <Name>sablier</Name>
   <Repository>sablierapp/sablier:1.18.0</Repository>
   <Registry>https://hub.docker.com/r/sablierapp/sablier</Registry>
 
