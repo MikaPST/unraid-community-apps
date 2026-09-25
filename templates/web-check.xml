@@ -1,0 +1,220 @@
+<Container version="2">
+
+  <Name>Web-Check</Name>
+  <Repository>lissy93/web-check:latest</Repository>
+  <Registry>https://hub.docker.com/r/lissy93/web-check</Registry>
+
+  <Network>bridge</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- ========================= -->
+  <!-- WEB UI PORT               -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Web UI Port"
+    Target="3000"
+    Default="3000"
+    Mode="tcp"
+    Description="Port used to access the Web-Check web interface."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- SHODAN API KEY            -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Shodan API Key"
+    Target="REACT_APP_SHODAN_API_KEY"
+    Default=""
+    Description="Optional Shodan API key used by Web-Check for additional hostname and IP enrichment."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="true"
+  />
+
+  <!-- ========================= -->
+  <!-- GOOGLE CLOUD API KEY      -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Google Cloud API Key"
+    Target="GOOGLE_CLOUD_API_KEY"
+    Default=""
+    Description="Optional Google Cloud API key used for PageSpeed Insights and related checks."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="true"
+  />
+
+  <!-- ========================= -->
+  <!-- WHO API KEY               -->
+  <!-- ========================= -->
+
+  <Config
+    Name="WhoAPI API Key"
+    Target="REACT_APP_WHO_API_KEY"
+    Default=""
+    Description="Optional WhoAPI key used to retrieve additional domain information."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="true"
+  />
+
+  <!-- ========================= -->
+  <!-- URLSCAN API KEY           -->
+  <!-- ========================= -->
+
+  <Config
+    Name="URLScan API Key"
+    Target="URL_SCAN_API_KEY"
+    Default=""
+    Description="Optional URLScan API key used for additional URL intelligence."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="true"
+  />
+
+  <!-- ========================= -->
+  <!-- API RATE LIMIT            -->
+  <!-- ========================= -->
+
+  <Config
+    Name="API Rate Limit"
+    Target="API_ENABLE_RATE_LIMIT"
+    Default="true"
+    Description="Enable rate limiting on Web-Check API endpoints. Recommended when exposing Web-Check through a reverse proxy."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- API TIMEOUT               -->
+  <!-- ========================= -->
+
+  <Config
+    Name="API Timeout"
+    Target="PUBLIC_API_TIMEOUT_LIMIT"
+    Default="25000"
+    Description="Maximum timeout for public API requests, in milliseconds."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- API CORS                  -->
+  <!-- ========================= -->
+
+  <Config
+    Name="API CORS Origin"
+    Target="API_CORS_ORIGIN"
+    Default=""
+    Description="Optional allowed origin(s) for API CORS."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- DISABLED CHECKS           -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Disabled Checks"
+    Target="API_DISABLED_CHECKS"
+    Default=""
+    Description="Optional comma-separated list of Web-Check checks to disable."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- ENABLED CHECKS            -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Enabled Checks"
+    Target="API_ENABLED_CHECKS"
+    Default=""
+    Description="Optional comma-separated list of checks to enable exclusively."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- BLOCKED HOSTS             -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Blocked Hosts"
+    Target="API_BLOCKED_HOSTS"
+    Default=""
+    Description="Optional comma-separated list of hosts or networks that Web-Check must never scan."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- ICON                      -->
+  <!-- ========================= -->
+
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-web-check.png</Icon>
+
+  <!-- ========================= -->
+  <!-- DESCRIPTION               -->
+  <!-- ========================= -->
+
+  <Overview>
+    Web-Check is an open-source OSINT tool for analysing websites and domains. It provides information about IP addresses, SSL certificates, DNS records, cookies, HTTP headers, domain information, crawl rules, redirects, open ports, traceroute, DNS security, performance, trackers, associated hostnames and other website intelligence.
+
+    Web-Check requires no configuration for basic use. Optional API keys can enable additional enrichment and external service integrations.
+  </Overview>
+
+  <Project>https://github.com/Lissy93/web-check</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/web-check.xml</TemplateURL>
+
+  <ReadMe>https://github.com/Lissy93/web-check/blob/master/.github/README.md</ReadMe>
+
+  <Category>Tools:Utilities</Category>
+
+  <ExtraSearchTerms>
+    Web Check Web-Check OSINT Website Security Reconnaissance Domain DNS SSL Shodan
+  </ExtraSearchTerms>
+
+  <Requires>
+    No special privileges are required. Optional API keys can be configured to enable additional checks and enrichment features.
+  </Requires>
+
+  <Changes>
+    Initial release - Web-Check
+  </Changes>
+
+  <Date>2026-09-25</Date>
+
+  <MinVer>6.1</MinVer>
+
+  <License>MIT</License>
+
+</Container>
