@@ -38,6 +38,10 @@ Self-hosted applications and integrations for the Unraid community.
     - [DockDash update monitoring](#dockdash-update-monitoring)
     - [DockDash architecture](#dockdash-architecture)
     - [DockDash useful links](#dockdash-useful-links)
+  - [Web-Check](#web-check)
+    - [Installing Web-Check on Unraid](#installing-web-check-on-unraid)
+    - [Web-Check configuration](#web-check-configuration)
+    - [Web-Check useful links](#web-check-useful-links)
 - [Repository structure](#repository-structure)
 - [Support](#support)
 - [License](#license)
@@ -56,14 +60,18 @@ The goal is to provide simple, documented and maintainable templates for useful 
 |---|---|---|---|
 | <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-sablier.png" width="40" alt="Sablier"> [Sablier](https://sablierapp.dev/) | Docker-aware middleware for automatically starting and stopping containers based on incoming requests | Docker / FinOps | Apache-2.0 |
 | <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-dockdash.png" width="40" alt="DockDash"> [DockDash](https://github.com/dougmaitelli/DockDash) | Docker dashboard for monitoring containers, resources, image updates and GitHub release notes | Docker / Monitoring | AGPL-3.0 |
+| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-web-check.png" width="40" alt="Web-Check"> [Web-Check](https://web-check.xyz/) | Open-source OSINT tool for analysing websites and domains | Security / OSINT | MIT |
 
 ---
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sablierapp/artwork/refs/heads/main/horizontal/sablier-horizontal-color.png" alt="SablierApp" width="400">
-</p>
+## Sablier
 
-# Sablier
+<p align="center">
+<img src="https://raw.githubusercontent.com/sablierapp/artwork/refs/heads/main/horizontal/sablier-horizontal-color.png" alt="Sablier" width="400"><br />
+<b><i>Docker-aware middleware for automatically starting and stopping containers</i></b>
+<br />
+<b>🌐 <a href="https://sablierapp.dev/">sablierapp.dev</a></b><br />
+</p>
 
 [Sablier](https://sablierapp.dev/) is a lightweight Docker-aware middleware that can automatically start and stop containers based on incoming requests.
 
@@ -325,11 +333,14 @@ Traefik receives the request, the Sablier middleware checks the application stat
 
 ---
 
-<p align="center">
-  <img src="https://github.com/dougmaitelli/DockDash/blob/master/assets/banner.png" alt="DockDash — container and service monitoring dashboard" width="400">
-</p>
+## DockDash
 
-# DockDash
+<p align="center">
+<img src="https://github.com/dougmaitelli/DockDash/blob/master/assets/banner.png" alt="DockDash" width="400"><br />
+<b><i>Container and service monitoring dashboard</i></b>
+<br />
+<b>🌐 <a href="https://github.com/dougmaitelli/DockDash">github.com/dougmaitelli/DockDash</a></b><br />
+</p>
 
 [DockDash](https://github.com/dougmaitelli/DockDash) is a self-hosted dashboard for visualizing Docker containers and network services.
 
@@ -612,6 +623,80 @@ This is an advanced configuration and is not required for the standard Unraid te
 
 ---
 
+## Web-Check
+
+<p align="center">
+<img src="https://cdn.as93.net/logo/web-check/w256" width="96" /><br />
+<b><i>Comprehensive, on-demand open source intelligence for any website</i></b>
+<br />
+<b>🌐 <a href="https://web-check.xyz/">web-check.xyz</a></b><br />
+</p>
+
+[Web-Check](https://web-check.xyz/) is an open-source OSINT tool for analysing websites and domains.
+
+It provides a broad range of checks covering IP addresses, SSL certificates, DNS records, HTTP headers, cookies, redirects, open ports, traceroute, DNS security, performance, trackers, associated hostnames and other website intelligence.
+
+- Docker image: `lissy93/web-check:latest`
+- Default container port: `3000`
+- Docker network: `bridge`
+- API keys: optional
+- License: MIT
+
+---
+
+## Installing Web-Check on Unraid
+
+The `templates/web-check.xml` file is intended for use with **Unraid Community Applications**.
+
+The template configures:
+
+- Web-Check Docker image
+- Standard Docker `bridge` network
+- HTTP port `3000`
+- Optional API keys
+- Optional API and scan configuration
+
+Web-Check does not require a persistent application volume for its standard deployment.
+
+### Web-Check configuration
+
+The template exposes optional API keys and advanced configuration parameters for users who want to enable additional checks or adapt Web-Check to their environment.
+
+| Parameter | Default | Description |
+|---|---:|---|
+| HTTP Port | `3000` | Port used to access the Web-Check web interface |
+| `GOOGLE_CLOUD_API_KEY` | — | Optional Google Cloud API key |
+| `SHODAN_API_KEY` | — | Optional Shodan API key |
+| `WHO_API_KEY` | — | Optional WhoAPI key |
+| `SECURITY_TRAILS_API_KEY` | — | Optional SecurityTrails API key |
+| `URL_SCAN_API_KEY` | — | Optional URLScan API key |
+| `CLOUDMERSIVE_API_KEY` | — | Optional Cloudmersive API key |
+| `TRANCO_USERNAME` | — | Optional Tranco username |
+| `TRANCO_API_KEY` | — | Optional Tranco API key |
+| `TORRENT_IP_API_KEY` | — | Optional Torrent IP API key |
+| `BUILT_WITH_API_KEY` | — | Optional BuiltWith API key |
+| `API_ENABLE_RATE_LIMIT` | `true` | Enable API rate limiting |
+| `PUBLIC_API_TIMEOUT_LIMIT` | `25000` | Maximum API request timeout in milliseconds |
+| `API_CORS_ORIGIN` | — | Optional API CORS origin |
+| `API_DISABLED_CHECKS` | — | Optional comma-separated list of checks to disable |
+| `API_ENABLED_CHECKS` | — | Optional comma-separated list of checks to enable exclusively |
+| `API_BLOCKED_HOSTS` | — | Optional hosts or networks that must not be scanned |
+| `TRUST_PROXY` | — | Optional reverse proxy trust configuration |
+
+### Web-Check and external services
+
+Web-Check can use optional third-party APIs to enrich its results. API keys are not required for the core functionality.
+
+If API keys are configured, review the relevant provider's terms and data handling before using them in a production environment.
+
+### Web-Check useful links
+
+- **Official website:** https://web-check.xyz/
+- **GitHub repository:** https://github.com/Lissy93/web-check
+- **Docker image:** https://hub.docker.com/r/lissy93/web-check
+
+---
+
 # Repository structure
 
 ```text
@@ -620,11 +705,13 @@ This is an advanced configuration and is not required for the standard Unraid te
 ├── icon.png
 ├── icon-sablier.png
 ├── icon-dockdash.png
+├── icon-web-check.png
 ├── README.md
 ├── LICENSE
 └── templates/
     ├── sablier.xml
-    └── dockdash.xml
+    ├── dockdash.xml
+    └── web-check.xml
 ```
 
 Each Docker application has its own XML template under:
@@ -656,6 +743,10 @@ https://github.com/sablierapp/sablier
 
 https://github.com/dougmaitelli/DockDash
 
+### Web-Check
+
+https://github.com/Lissy93/web-check
+
 For issues specifically related to the **Unraid templates maintained in this repository**, please open an issue in this GitHub repository.
 
 ---
@@ -668,5 +759,6 @@ Each application remains subject to its own upstream license:
 
 - **Sablier:** Apache License 2.0
 - **DockDash:** GNU Affero General Public License v3.0
+- **Web-Check:** MIT License
 
 The repository itself is distributed under the license specified in `LICENSE`.
