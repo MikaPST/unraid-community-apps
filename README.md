@@ -54,8 +54,8 @@ The goal is to provide simple, documented and maintainable templates for useful 
 
 | Application | Description | Category | License |
 |---|---|---|---|
-| [Sablier](https://sablierapp.dev/) | Docker-aware middleware for automatically starting and stopping containers based on incoming requests | Docker / FinOps | Apache-2.0 |
-| [DockDash](https://github.com/dougmaitelli/DockDash) | Docker dashboard for monitoring containers, resources, image updates and GitHub release notes | Docker / Monitoring | AGPL-3.0 |
+| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-sablier.png" width="40" alt="Sablier"> [Sablier](https://sablierapp.dev/) | Docker-aware middleware for automatically starting and stopping containers based on incoming requests | Docker / FinOps | Apache-2.0 |
+| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-dockdash.png" width="40" alt="DockDash"> [DockDash](https://github.com/dougmaitelli/DockDash) | Docker dashboard for monitoring containers, resources, image updates and GitHub release notes | Docker / Monitoring | AGPL-3.0 |
 
 ---
 
