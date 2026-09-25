@@ -59,10 +59,8 @@ The goal is to provide simple, documented and maintainable templates for useful 
 
 ---
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-sablier.png" width="100" alt="Sablier">
+![Sablier](https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-sablier.png)
 # Sablier
-</div>
 
 [Sablier](https://sablierapp.dev/) is a lightweight Docker-aware middleware that can automatically start and stop containers based on incoming requests.
 
@@ -324,10 +322,8 @@ Traefik receives the request, the Sablier middleware checks the application stat
 
 ---
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-dockdash.png" width="100" alt="DockDash">
+![Sablier](https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-dockdash.png)
 # DockDash
-</div>
 
 [DockDash](https://github.com/dougmaitelli/DockDash) is a self-hosted dashboard for visualizing Docker containers and network services.
 
