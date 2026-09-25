@@ -13,6 +13,8 @@
   <!-- Web-Check icon -->
   <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-web-check.png</Icon>
 
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+
   <Overview>
     Web-Check is an open-source OSINT tool for analysing websites and domains. It provides information about IP addresses, SSL certificates, DNS records, cookies, HTTP headers, domain information, crawl rules, redirects, open ports, traceroute, DNS security, performance, trackers, associated hostnames and other website intelligence.
 
@@ -59,6 +61,21 @@
     Type="Port"
     Display="always"
     Required="true"
+    Mask="false"
+  />
+
+  <!-- ========================= -->
+  <!-- WEB-CHECK HOST             -->
+  <!-- ========================= -->
+
+  <Config
+    Name="Host"
+    Target="HOST"
+    Default="0.0.0.0"
+    Description="Network interface on which Web-Check listens. The default value is 0.0.0.0."
+    Type="Variable"
+    Display="advanced"
+    Required="false"
     Mask="false"
   />
 
