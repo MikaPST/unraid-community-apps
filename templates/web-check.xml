@@ -1,5 +1,5 @@
 <Container version="2">
-  <Name>Web-Check</Name>
+  <Name>web-check</Name>
   <Repository>lissy93/web-check:latest</Repository>
   <Registry>https://hub.docker.com/r/lissy93/web-check</Registry>
 
