@@ -13,6 +13,7 @@
   <!-- Web-Check icon -->
   <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-web-check.png</Icon>
 
+  <!-- Web-Check web interface -->
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
 
   <Overview>
