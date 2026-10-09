@@ -633,7 +633,7 @@ This is an advanced configuration and is not required for the standard Unraid te
 ## Portabase Agent
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-portabase.png" alt="Portabase Agent" width="96"><br />
+<img src="https://github.com/Portabase/portabase/raw/main/.github/assets/logo.png" alt="Portabase Agent" width="96"><br />
 <b><i>Database backup and restore agent for Portabase</i></b>
 <br />
 <b>🌐 <a href="https://portabase.io/">portabase.io</a></b><br />
@@ -696,6 +696,7 @@ The agent does not need a public HTTP port or a reverse-proxy route. Keep `EDGE_
 ## Portabase Agent useful links
 
 - **Official website:** https://portabase.io/
+- **GitHub repository:** https://github.com/Portabase/portabase
 - **Official documentation:** https://portabase.io/docs/
 - **Docker image:** https://hub.docker.com/r/portabase/agent
 
