@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon.png" alt="MikaPST Unraid Community Apps" width="160">
+<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon.png" alt="MikaPST Unraid Community Apps" width="160">
 
 # MikaPST — Unraid Community Apps
 
