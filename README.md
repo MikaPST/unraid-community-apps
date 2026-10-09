@@ -58,9 +58,9 @@ The goal is to provide simple, documented and maintainable templates for useful 
 
 | Application | Description | Category | License |
 |---|---|---|---|
-| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-sablier.png" width="40" alt="Sablier"> [Sablier](https://sablierapp.dev/) | Docker-aware middleware for automatically starting and stopping containers based on incoming requests | Docker / FinOps | Apache-2.0 |
-| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-dockdash.png" width="40" alt="DockDash"> [DockDash](https://github.com/dougmaitelli/DockDash) | Docker dashboard for monitoring containers, resources, image updates and GitHub release notes | Docker / Monitoring | AGPL-3.0 |
-| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-web-check.png" width="40" alt="Web-Check"> [Web-Check](https://web-check.xyz/) | Open-source OSINT tool for analysing websites and domains | Security / OSINT | MIT |
+| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-sablier.png" width="40" alt="Sablier"> [Sablier](https://sablierapp.dev/) | Docker-aware middleware for automatically starting and stopping containers based on incoming requests | Docker / FinOps | Apache-2.0 |
+| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-dockdash.png" width="40" alt="DockDash"> [DockDash](https://github.com/dougmaitelli/DockDash) | Docker dashboard for monitoring containers, resources, image updates and GitHub release notes | Docker / Monitoring | AGPL-3.0 |
+| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-web-check.png" width="40" alt="Web-Check"> [Web-Check](https://web-check.xyz/) | Open-source OSINT tool for analysing websites and domains | Security / OSINT | MIT |
 
 ---
 
