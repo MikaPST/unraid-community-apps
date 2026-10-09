@@ -11,7 +11,7 @@
   <Privileged>false</Privileged>
 
   <!-- Web-Check icon -->
-  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-web-check.png</Icon>
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-web-check.png</Icon>
 
   <!-- Web-Check web interface -->
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
