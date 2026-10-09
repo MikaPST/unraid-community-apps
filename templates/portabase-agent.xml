@@ -12,7 +12,7 @@
   <Privileged>false</Privileged>
 
   <!-- Portabase Agent icon -->
-  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icon-portabase.png</Icon>
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-portabase.png</Icon>
 
   <!-- No web interface: Portabase Agent is a background service -->
   <WebUI/>
