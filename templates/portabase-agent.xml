@@ -1,5 +1,5 @@
 <Container version="2">
-  <Name>portabase-agent</Name>
+  <Name>Portabase-Agent</Name>
   <Repository>portabase/agent:latest</Repository>
   <Registry>https://hub.docker.com/r/portabase/agent</Registry>
 
@@ -61,7 +61,7 @@
     Initial release - Portabase Agent
   </Changes>
 
-  <Date>2026-10-09</Date>
+  <Date>2026-10-12</Date>
 
   <MinVer>6.1</MinVer>
 
