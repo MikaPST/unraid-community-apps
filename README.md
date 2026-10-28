@@ -7,7 +7,7 @@
 **Docker application templates for Unraid**
 
 [![Unraid](https://img.shields.io/badge/Unraid-Community%20Apps-blue?logo=unraid)](https://unraid.net/)
-[![Templates](https://img.shields.io/badge/Templates-5-2496ED?logo=docker)](#applications)
+[![Templates](https://img.shields.io/badge/Templates-6-2496ED?logo=docker)](#applications)
 [![GitHub](https://img.shields.io/badge/GitHub-MikaPST-black?logo=github)](https://github.com/MikaPST/unraid-community-apps)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
@@ -27,12 +27,14 @@ This repository aims to make useful self-hosted tools easier to deploy and maint
 
 ### Sablier
 
-<p>
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-sablier.png" width="84" align="left" alt="Sablier">
-  <a href="docs/apps/sablier.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Sablier documentation" align="right"></a>
-  <a href="templates/sablier.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier XML template" align="right"></a>
-  <a href="compose/sablier.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier Docker Compose file" align="right"></a>
-</p>
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-sablier.png" width="84" alt="Sablier">
+  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+    <a href="docs/apps/sablier.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Sablier documentation"></a>
+    <a href="templates/sablier.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier XML template"></a>
+    <a href="compose/sablier.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier Docker Compose file"></a>
+  </div>
+</div>
 
 **[Sablier](https://sablierapp.dev/)**  
 Docker-aware middleware that can start and stop containers based on incoming requests. It works with reverse proxies such as Traefik to help reduce resource usage when applications are idle.
@@ -48,16 +50,17 @@ Docker-aware middleware that can start and stop containers based on incoming req
 
 <br clear="all">
 
----
 
 ### DockDash
 
-<p>
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-dockdash.png" width="84" align="left" alt="DockDash">
-  <a href="docs/apps/dockdash.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DockDash documentation" align="right"></a>
-  <a href="templates/dockdash.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash XML template" align="right"></a>
-  <a href="compose/dockdash.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash Docker Compose file" align="right"></a>
-</p>
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-dockdash.png" width="84" alt="DockDash">
+  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+    <a href="docs/apps/dockdash.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DockDash documentation"></a>
+    <a href="templates/dockdash.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash XML template"></a>
+    <a href="compose/dockdash.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash Docker Compose file"></a>
+  </div>
+</div>
 
 **[DockDash](https://github.com/dougmaitelli/DockDash)**  
 A Docker dashboard for monitoring containers, resource usage, image updates, health, and GitHub release notes.
@@ -74,16 +77,17 @@ A Docker dashboard for monitoring containers, resource usage, image updates, hea
 
 <br clear="all">
 
----
 
 ### Portabase Agent
 
-<p>
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-portabase.png" width="84" align="left" alt="Portabase Agent">
-  <a href="docs/apps/portabase-agent.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Portabase Agent documentation" align="right"></a>
-  <a href="templates/portabase-agent.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent XML template" align="right"></a>
-  <a href="compose/portabase-agent.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent Docker Compose file" align="right"></a>
-</p>
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-portabase.png" width="84" alt="Portabase Agent">
+  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+    <a href="docs/apps/portabase-agent.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Portabase Agent documentation"></a>
+    <a href="templates/portabase-agent.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent XML template"></a>
+    <a href="compose/portabase-agent.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent Docker Compose file"></a>
+  </div>
+</div>
 
 **[Portabase Agent](https://portabase.io/)**  
 A background agent that connects Portabase to database servers for configured backup and restore operations. It does not require a web interface or a published web port.
@@ -100,16 +104,17 @@ A background agent that connects Portabase to database servers for configured ba
 
 <br clear="all">
 
----
 
 ### Web-Check
 
-<p>
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-web-check.png" width="84" align="left" alt="Web-Check">
-  <a href="docs/apps/web-check.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Web-Check documentation" align="right"></a>
-  <a href="templates/web-check.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check XML template" align="right"></a>
-  <a href="compose/web-check.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check Docker Compose file" align="right"></a>
-</p>
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-web-check.png" width="84" alt="Web-Check">
+  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+    <a href="docs/apps/web-check.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Web-Check documentation"></a>
+    <a href="templates/web-check.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check XML template"></a>
+    <a href="compose/web-check.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check Docker Compose file"></a>
+  </div>
+</div>
 
 **[Web-Check](https://web-check.xyz/)**  
 An open-source OSINT tool for inspecting websites and domains, including DNS records, TLS certificates, HTTP headers, trackers, redirects, and other technical signals.
@@ -126,16 +131,17 @@ An open-source OSINT tool for inspecting websites and domains, including DNS rec
 
 <br clear="all">
 
----
 
 ### PhotoCraft Web
 
-<p>
-  <img src="https://raw.githubusercontent.com/storytold/photocraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.photocraft.png" width="84" align="left" alt="PhotoCraft Web">
-  <a href="docs/apps/photocraft-web.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="PhotoCraft Web documentation" align="right"></a>
-  <a href="templates/photocraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web XML template" align="right"></a>
-  <a href="compose/photocraft-web.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web Docker Compose file" align="right"></a>
-</p>
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+  <img src="https://raw.githubusercontent.com/storytold/photocraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.photocraft.png" width="84" alt="PhotoCraft Web">
+  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+    <a href="docs/apps/photocraft-web.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="PhotoCraft Web documentation"></a>
+    <a href="templates/photocraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web XML template"></a>
+    <a href="compose/photocraft-web.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web Docker Compose file"></a>
+  </div>
+</div>
 
 **[PhotoCraft Web](https://github.com/storytold/photocraft)**  
 A browser-based image editor hosted on your own server. This community-maintained Docker image serves PhotoCraft's WebAssembly application through NGINX; image files are opened and exported through your browser rather than stored by the container.
@@ -153,7 +159,30 @@ A browser-based image editor hosted on your own server. This community-maintaine
 
 <br clear="all">
 
----
+### FilmCraft Web
+
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-filmcraft-web.png" width="84" alt="FilmCraft Web">
+  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+    <a href="templates/filmcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="FilmCraft Web XML template"></a>
+    <a href="https://github.com/MikaPST/filmcraft-web"><img src="https://img.shields.io/badge/Docker%20Image-GHCR-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="FilmCraft Web Docker image and packaging"></a>
+  </div>
+</div>
+
+**[FilmCraft Web](https://github.com/storytold/filmcraft)**  
+A browser-based video editor served by a community-maintained Docker image. The container serves FilmCraft's WebAssembly application through NGINX; video editing runs in the browser rather than in a remote desktop environment.
+
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Media / Video Editing
+  - **Docker image:** `ghcr.io/mikapst/filmcraft-web:latest`
+  - **Container port:** `8080` (Unraid host port defaults to `4444`)
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official FilmCraft image
+</details>
+
+<br clear="all">
 
 ## Installation
 
@@ -206,7 +235,8 @@ For **Portabase Agent**, supply the required `EDGE_KEY` before starting the serv
 │   ├── dockdash.xml
 │   ├── portabase-agent.xml
 │   ├── web-check.xml
-│   └── photocraft-web.xml
+│   ├── photocraft-web.xml
+│   └── filmcraft-web.xml
 ├── compose/
 │   ├── sablier.yml
 │   ├── dockdash.yml
@@ -239,6 +269,7 @@ For issues with an application's features or behaviour, start with the upstream 
 - **Portabase Agent:** [Official website](https://portabase.io/) · [GitHub repository](https://github.com/Portabase/portabase)
 - **Web-Check:** [GitHub repository](https://github.com/Lissy93/web-check)
 - **PhotoCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/photocraft-web) · [Upstream PhotoCraft](https://github.com/storytold/photocraft)
+- **FilmCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/filmcraft-web) · [Upstream FilmCraft](https://github.com/storytold/filmcraft)
 
 For issues specific to the Unraid templates maintained in this repository, please [open a GitHub issue](https://github.com/MikaPST/unraid-community-apps/issues).
 
@@ -250,6 +281,7 @@ This repository contains Unraid application templates maintained by MikaPST. Eac
 - **DockDash:** GNU Affero General Public License v3.0
 - **Web-Check:** MIT License
 - **PhotoCraft:** the upstream project is dual-licensed under MIT or Apache License 2.0; see its license and attribution files. The MikaPST Docker packaging project and this template repository have their own repository-level license terms.
+- **FilmCraft:** refer to the upstream project for its applicable license terms; the MikaPST Docker packaging project and this template repository have their own repository-level license terms.
 - **Portabase Agent:** refer to the upstream project for its applicable license terms.
 
 The repository itself is distributed under the license specified in [`LICENSE`](LICENSE).
