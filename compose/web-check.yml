@@ -1,0 +1,30 @@
+services:
+  web-check:
+    image: lissy93/web-check:latest
+    container_name: web-check
+    ports:
+      - "${WEB_CHECK_PORT:-3000}:3000"
+    restart: unless-stopped
+    environment:
+      # Optional API keys
+      GOOGLE_CLOUD_API_KEY: "${GOOGLE_CLOUD_API_KEY:-}"
+      SHODAN_API_KEY: "${SHODAN_API_KEY:-}"
+      WHO_API_KEY: "${WHO_API_KEY:-}"
+      SECURITY_TRAILS_API_KEY: "${SECURITY_TRAILS_API_KEY:-}"
+      URL_SCAN_API_KEY: "${URL_SCAN_API_KEY:-}"
+      CLOUDMERSIVE_API_KEY: "${CLOUDMERSIVE_API_KEY:-}"
+      TRANCO_USERNAME: "${TRANCO_USERNAME:-}"
+      TRANCO_API_KEY: "${TRANCO_API_KEY:-}"
+      TORRENT_IP_API_KEY: "${TORRENT_IP_API_KEY:-}"
+      BUILT_WITH_API_KEY: "${BUILT_WITH_API_KEY:-}"
+
+      # API settings
+      API_ENABLE_RATE_LIMIT: "${API_ENABLE_RATE_LIMIT:-true}"
+      PUBLIC_API_TIMEOUT_LIMIT: "${PUBLIC_API_TIMEOUT_LIMIT:-25000}"
+      API_CORS_ORIGIN: "${API_CORS_ORIGIN:-}"
+      TRUST_PROXY: "${TRUST_PROXY:-}"
+
+      # Check selection and host restrictions
+      API_DISABLED_CHECKS: "${API_DISABLED_CHECKS:-}"
+      API_ENABLED_CHECKS: "${API_ENABLED_CHECKS:-}"
+      API_BLOCKED_HOSTS: "${API_BLOCKED_HOSTS:-}"
