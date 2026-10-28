@@ -28,7 +28,7 @@
 
   <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/dockdash.xml</TemplateURL>
 
-  <ReadMe>https://github.com/MikaPST/unraid-community-apps/blob/main/README.md</ReadMe>
+  <ReadMe>https://github.com/MikaPST/unraid-community-apps/blob/main/docs/apps/dockdash.md</ReadMe>
 
   <Category>Tools:Utilities</Category>
 
@@ -44,7 +44,7 @@
     Initial release - DockDash
   </Changes>
 
-  <Date>2026-09-25</Date>
+  <Date>2026-10-28</Date>
 
   <MinVer>6.1</MinVer>
 
