@@ -1,0 +1,68 @@
+<Container version="2">
+  <Name>photocraft-web</Name>
+  <Repository>ghcr.io/mikapst/photocraft-web:latest</Repository>
+  <Registry>https://github.com/MikaPST/photocraft-web/pkgs/container/photocraft-web</Registry>
+
+  <!-- Default network for standard Unraid Docker deployments.
+       Users can change this to their preferred Docker network. -->
+  <Network>bridge</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- PhotoCraft Web icon -->
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-photocraft-web.png</Icon>
+
+  <!-- PhotoCraft Web web interface -->
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+
+  <Overview>
+    PhotoCraft Web is a community-maintained Docker image that makes PhotoCraft available through a browser-based interface. Edit images directly in your browser without requiring a dedicated desktop application.
+
+    Images are opened from and exported to your local device through the browser. The container does not require a persistent data volume for image files.
+  </Overview>
+
+  <Project>https://github.com/storytold/photocraft</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/photocraft-web.xml</TemplateURL>
+
+  <ReadMe>https://github.com/MikaPST/photocraft-web/blob/main/README.md</ReadMe>
+
+  <Category>Tools:Utilities</Category>
+
+  <ExtraSearchTerms>
+    PhotoCraft Photo Craft Image Editor Photo Editor Image Editing Browser WebAssembly
+  </ExtraSearchTerms>
+
+  <Requires>
+    No special privileges or persistent data volumes are required. The web interface is served over HTTP by the container. When using a reverse proxy such as Traefik, configure the proxy to forward requests to the container HTTP port.
+  </Requires>
+
+  <Changes>
+    Initial release - PhotoCraft Web
+  </Changes>
+
+  <Date>2026-10-28</Date>
+
+  <MinVer>6.1</MinVer>
+
+  <License>MIT OR Apache-2.0</License>
+
+
+  <!-- ========================= -->
+  <!-- PHOTOCRAFT WEB HTTP PORT   -->
+  <!-- ========================= -->
+
+  <Config
+    Name="HTTP Port"
+    Target="8080"
+    Default="8080"
+    Mode="tcp"
+    Description="Port used to access the PhotoCraft Web interface."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+</Container>
