@@ -1,0 +1,67 @@
+<Container version="2">
+  <Name>filmcraft-web</Name>
+  <Repository>ghcr.io/mikapst/filmcraft-web:latest</Repository>
+  <Registry>https://github.com/MikaPST/filmcraft-web/pkgs/container/filmcraft-web</Registry>
+
+  <!-- Default network for standard Unraid Docker deployments.
+       Users can change this to their preferred Docker network. -->
+  <Network>bridge</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- FilmCraft Web icon -->
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-filmcraft-web.png</Icon>
+
+  <!-- FilmCraft Web web interface -->
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+
+  <Overview>
+    FilmCraft Web is a community-maintained Docker image that provides FilmCraft through a browser-based video-editing interface.
+    The container serves the static WebAssembly application through NGINX; it does not provide a remote Linux desktop or desktop session.
+    Video editing runs in the user's browser, subject to the capabilities and performance of their device and browser.
+    The container serves the web application files and does not require a persistent volume for media files. Users select and work with files through the browser application.
+    Ideal for Unraid users who want to access FilmCraft from a web browser without running a remote desktop environment.
+  </Overview>
+
+  <Project>https://github.com/storytold/filmcraft</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/filmcraft-web.xml</TemplateURL>
+
+  <ReadMe>https://github.com/MikaPST/filmcraft-web/blob/main/README.md</ReadMe>
+
+  <Category>MediaApp:Video</Category>
+
+  <ExtraSearchTerms>
+    FilmCraft Film Craft Video Editor Video Editing Browser WebAssembly WASM
+  </ExtraSearchTerms>
+
+  <Requires>
+    No special privileges or persistent data volumes are required to serve the web interface. The container serves HTTP on port 8080. When using a reverse proxy such as Traefik, configure the proxy to forward requests to the container HTTP port.
+  </Requires>
+
+  <Changes>
+    Initial release - FilmCraft Web
+  </Changes>
+
+  <Date>2026-10-28</Date>
+
+  <MinVer>6.1</MinVer>
+
+  <!-- ========================= -->
+  <!-- FILMCRAFT WEB HTTP PORT   -->
+  <!-- ========================= -->
+
+  <Config
+    Name="HTTP Port"
+    Target="8080"
+    Default="4444"
+    Mode="tcp"
+    Description="Host port used to access the FilmCraft Web interface."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+</Container>
