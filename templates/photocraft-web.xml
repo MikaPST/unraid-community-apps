@@ -17,9 +17,11 @@
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
 
   <Overview>
-    PhotoCraft Web is a community-maintained Docker image that makes PhotoCraft available through a browser-based interface. Edit images directly in your browser without requiring a dedicated desktop application.
-
-    Images are opened from and exported to your local device through the browser. The container does not require a persistent data volume for image files.
+    PhotoCraft Web is a community-maintained Docker image that provides PhotoCraft through a native browser-based interface.
+    Unlike desktop-in-a-container solutions that require accessing a remote Linux desktop, this version serves PhotoCraft's WebAssembly application directly to your browser. No Linux desktop environment, remote desktop session, or GPU passthrough is required.
+    Image editing and processing run on the user's device inside a modern web browser. Open images directly from your computer using the browser's file picker, then save or export the results as browser downloads.
+    The container only serves the web application. No database or persistent image-storage volume is required.
+    Ideal for Unraid users who want a straightforward, browser-native PhotoCraft experience without running a remote Linux desktop.
   </Overview>
 
   <Project>https://github.com/storytold/photocraft</Project>
