@@ -43,7 +43,7 @@
 
   <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/portabase-agent.xml</TemplateURL>
 
-  <ReadMe>https://github.com/MikaPST/unraid-community-apps/blob/main/README.md</ReadMe>
+  <ReadMe>https://github.com/MikaPST/unraid-community-apps/blob/main/docs/apps/portabase-agent.md</ReadMe>
 
   <Category>Backup:Tools:Network:Management</Category>
 
@@ -61,7 +61,7 @@
     Initial release - Portabase Agent
   </Changes>
 
-  <Date>2026-10-12</Date>
+  <Date>2026-10-28</Date>
 
   <MinVer>6.1</MinVer>
 
