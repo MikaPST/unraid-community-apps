@@ -7,6 +7,7 @@
 **Docker application templates for Unraid**
 
 [![Unraid](https://img.shields.io/badge/Unraid-Community%20Apps-blue?logo=unraid)](https://unraid.net/)
+[![Templates](https://img.shields.io/badge/Templates-5-2496ED?logo=docker)](#applications)
 [![GitHub](https://img.shields.io/badge/GitHub-MikaPST-black?logo=github)](https://github.com/MikaPST/unraid-community-apps)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
@@ -16,767 +17,178 @@ Self-hosted applications and integrations for the Unraid community.
 
 ---
 
-# Table of Contents
+## About
 
-- [Applications](#applications)
-  - [Sablier](#sablier)
-    - [Installing Sablier on Unraid](#installing-sablier-on-unraid)
-    - [Docker network](#docker-network)
-    - [Traefik integration](#traefik-integration)
-      - [Enable the Sablier plugin](#1-enable-the-sablier-plugin-in-traefik)
-      - [Create a Sablier middleware](#2-create-a-sablier-middleware)
-    - [Activating Sablier on an application](#activating-sablier-on-an-application)
-    - [Custom Sablier themes](#custom-sablier-themes)
-    - [Sablier Theme Editor](#sablier-theme-editor)
-    - [Sablier architecture](#sablier-architecture)
-    - [Sablier useful links](#sablier-useful-links)
-  - [DockDash](#dockdash)
-    - [Installing DockDash on Unraid](#installing-dockdash-on-unraid)
-    - [Security warning](#security-warning)
-    - [Authentication](#authentication)
-    - [DockDash configuration](#dockdash-configuration)
-    - [DockDash update monitoring](#dockdash-update-monitoring)
-    - [DockDash architecture](#dockdash-architecture)
-    - [DockDash useful links](#dockdash-useful-links)
-  - [Portabase Agent](#portabase-agent)
-    - [Installing Portabase Agent on Unraid](#installing-portabase-agent-on-unraid)
-    - [Portabase Agent configuration](#portabase-agent-configuration)
-    - [Network and database access](#network-and-database-access)
-    - [Portabase Agent useful links](#portabase-agent-useful-links)
-  - [Web-Check](#web-check)
-    - [Installing Web-Check on Unraid](#installing-web-check-on-unraid)
-    - [Web-Check configuration](#web-check-configuration)
-    - [Web-Check useful links](#web-check-useful-links)
-- [Repository structure](#repository-structure)
-- [Support](#support)
-- [License](#license)
+A curated collection of Docker application templates for **Unraid Community Applications**.
 
----
+This repository aims to make useful self-hosted tools easier to deploy and maintain on Unraid. Each application has a dedicated guide covering installation, configuration, and useful links. The XML templates stay together in one place, while the documentation is organised separately for easy maintenance.
 
-# Applications
+## Applications
 
-This repository provides Docker application templates designed for **Unraid Community Applications**.
+### Sablier
 
-The goal is to provide simple, documented and maintainable templates for useful self-hosted applications and integrations.
-
-## Available applications
-
-| Application | Description | Category | License |
-|---|---|---|---|
-| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-sablier.png" width="40" alt="Sablier"> [Sablier](https://sablierapp.dev/) | Docker-aware middleware for automatically starting and stopping containers based on incoming requests | Docker / FinOps | Apache-2.0 |
-| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-dockdash.png" width="40" alt="DockDash"> [DockDash](https://github.com/dougmaitelli/DockDash) | Docker dashboard for monitoring containers, resources, image updates and GitHub release notes | Docker / Monitoring | AGPL-3.0 |
-| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-portabase.png" width="40" alt="Portabase Agent"> [Portabase Agent](https://portabase.io/) | Agent connecting databases to Portabase for backup and restore operations | Backup / Database | See upstream project |
-| <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-web-check.png" width="40" alt="Web-Check"> [Web-Check](https://web-check.xyz/) | Open-source OSINT tool for analysing websites and domains | Security / OSINT | MIT |
-
----
-
-## Sablier
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/sablierapp/artwork/refs/heads/main/horizontal/sablier-horizontal-color.png" alt="Sablier" width="400"><br />
-<b><i>Docker-aware middleware for automatically starting and stopping containers</i></b>
-<br />
-<b>🌐 <a href="https://sablierapp.dev/">sablierapp.dev</a></b><br />
+<p>
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-sablier.png" width="84" align="left" alt="Sablier">
+  <a href="docs/apps/sablier.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Sablier documentation" align="right"></a>
+  <a href="templates/sablier.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier XML template" align="right"></a>
+  <a href="compose/sablier.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier Docker Compose file" align="right"></a>
 </p>
 
-[Sablier](https://sablierapp.dev/) is a lightweight Docker-aware middleware that can automatically start and stop containers based on incoming requests.
+**[Sablier](https://sablierapp.dev/)**  
+Docker-aware middleware that can start and stop containers based on incoming requests. It works with reverse proxies such as Traefik to help reduce resource usage when applications are idle.
 
-It is designed to work with reverse proxies such as **Traefik**, helping reduce resource consumption by stopping applications that are not being used.
+<details>
+  <summary><strong>Quick information</strong></summary>
 
-- Docker image: `sablierapp/sablier:1.15.0`
-- Default HTTP/API port: `10000`
-- Docker provider: enabled
-- Reverse proxy integration: Traefik, Caddy and other compatible proxies
-- License: Apache-2.0
+  - **Category:** Docker / FinOps
+  - **Docker image:** `sablierapp/sablier:1.18.0`
+  - **Default port:** `10000`
+  - **Upstream license:** Apache-2.0
+</details>
 
-## Installing Sablier on Unraid
-
-The `templates/sablier.xml` file is intended for use with **Unraid Community Applications**.
-
-The template configures:
-
-- Sablier Docker image
-- Docker socket access
-- Sablier configuration file
-- Optional custom themes directory
-- HTTP port `10000`
-- Traefik labels
-- `start --provider.name=docker` startup command
-
-### Docker network
-
-The template uses the Docker network:
-
-```text
-traefik
-```
-
-by default, because this is a common configuration when Sablier is used with Traefik.
-
-If you use another reverse proxy, you can change the Docker network to the network used by your reverse proxy.
-
-Sablier itself is not limited to Traefik.
+<br clear="all">
 
 ---
 
-## Traefik integration
-
-Sablier can be integrated with Traefik through the official Sablier Traefik plugin.
-
-### 1. Enable the Sablier plugin in Traefik
-
-Add the following configuration to your `traefik.yml`:
-
-```yaml
-# =========================
-# PLUGINS
-# =========================
-experimental:
-  plugins:
-    sablier:
-      moduleName: github.com/sablierapp/sablier-traefik-plugin
-      version: v1.3.0
-```
-
-Restart Traefik after changing this configuration.
-
-The plugin used in this example is **Sablier Traefik Plugin v1.3.0**.
-
-Official Traefik plugin page:
-
-https://plugins.traefik.io/plugins/69104ac3b7d4dd76110a1a09/sablier
-
-### 2. Create a Sablier middleware
-
-Once the plugin is enabled, configure a middleware in your Traefik dynamic configuration, for example in `middlewares.yml`.
-
-Example:
-
-```yaml
-# =========================
-# SABLIER APP
-# =========================
-sablier-bentopdf:
-  plugin:
-    sablier:
-      sablierUrl: "http://sablier:10000"
-      group: "bentopdf"
-      sessionDuration: 5m
-      ignoreUserAgent: "kuma"
-      dynamic:
-        displayName: "BentoPDF"
-        showDetails: true
-        theme: ghost_fr
-        refreshFrequency: 10s
-```
-
-### Configuration explained
-
-| Parameter | Description |
-|---|---|
-| `sablierUrl` | URL used by the Traefik plugin to communicate with Sablier |
-| `group` | Sablier group associated with the application |
-| `sessionDuration` | How long the application remains active after being requested |
-| `ignoreUserAgent` | Optional user-agent to ignore |
-| `displayName` | Name displayed by the dynamic Sablier page |
-| `showDetails` | Displays additional information on the Sablier page |
-| `theme` | Theme used by the Sablier dynamic page |
-| `refreshFrequency` | Frequency used to refresh the Sablier page |
-
-The `sablierUrl` assumes that the Sablier container is reachable as `sablier` on the same Docker network as Traefik.
-
----
-
-## Activating Sablier on an application
-
-Once the middleware has been created, the application that should be managed by Sablier needs the appropriate Traefik and Sablier labels.
-
-For example, for BentoPDF:
-
-```yaml
-labels:
-  - "traefik.http.routers.bentopdf.middlewares=sablier-bentopdf@file"
-  - "sablier.enable=true"
-  - "sablier.group=bentopdf"
-  - "traefik.docker.allownonrunning=true"
-```
-
-The important elements are:
-
-```text
-traefik.http.routers.bentopdf.middlewares=sablier-bentopdf@file
-```
-
-This attaches the previously created Traefik middleware to the application's router.
-
-```text
-sablier.enable=true
-```
-
-This enables Sablier management for the container.
-
-```text
-sablier.group=bentopdf
-```
-
-This associates the container with the same Sablier group configured in the middleware.
-
-```text
-traefik.docker.allownonrunning=true
-```
-
-This allows Traefik to consider the container even when it is stopped, which is important for Sablier's start-on-request behavior.
-
-Replace `bentopdf` with the name/group appropriate for your application.
-
----
-
-## Custom Sablier themes
-
-Sablier supports custom themes for its dynamic pages.
-
-The Unraid template provides an optional directory:
-
-```text
-/mnt/user/appdata/sablier/themes
-```
-
-which is mounted inside the container as:
-
-```text
-/etc/sablier/themes
-```
-
-For example, custom themes can be stored locally as:
-
-```text
-/mnt/user/appdata/sablier/themes/ghost_fr.html
-/mnt/user/appdata/sablier/themes/hacker-terminal_fr.html
-/mnt/user/appdata/sablier/themes/shuffle_fr.html
-```
-
-They can then be referenced from the Traefik middleware configuration:
-
-```yaml
-dynamic:
-  theme: ghost_fr
-```
-
-or:
-
-```yaml
-dynamic:
-  theme: hacker-terminal_fr
-```
-
-This makes it possible to customize the Sablier page displayed while an application is starting.
-
-### Sablier Theme Editor
-
-Sablier provides an official online theme editor that makes it easy to create, customize and preview Sablier themes.
-
-**Official Sablier Theme Editor:**
-
-https://editor.sablierapp.dev/
-
-Once your theme is created, you can export it and place the resulting `.html` file in the Sablier themes directory:
-
-```text
-/mnt/user/appdata/sablier/themes/
-```
-
-You can then reference the theme from your Traefik middleware configuration using the filename without the `.html` extension.
-
-For example:
-
-```text
-ghost_fr.html
-```
-
-becomes:
-
-```yaml
-dynamic:
-  theme: ghost_fr
-```
-
----
-
-## Sablier architecture
-
-A typical Traefik + Sablier setup looks like this:
-
-```text
-                         Internet
-                             │
-                             ▼
-                         Traefik
-                             │
-                 Sablier Traefik Plugin
-                             │
-                             ▼
-                          Sablier
-                     ┌───────┴───────┐
-                     │ Docker API    │
-                     ▼               │
-              Docker containers     │
-                     │               │
-          ┌──────────┼──────────┐    │
-          ▼          ▼          ▼    │
-       BentoPDF   Shelfmark   Caesium │
-```
-
-Traefik receives the request, the Sablier middleware checks the application state, and Sablier can start the associated container when necessary.
-
----
-
-## Sablier useful links
-
-- **Official website:** https://sablierapp.dev/
-- **Official documentation / tutorials:** https://sablierapp.dev/tutorials/
-- **GitHub repository:** https://github.com/sablierapp/sablier
-- **Traefik plugin:** https://plugins.traefik.io/plugins/69104ac3b7d4dd76110a1a09/sablier
-
----
-
-## DockDash
-
-<p align="center">
-<img src="https://github.com/dougmaitelli/DockDash/blob/master/assets/banner.png" alt="DockDash" width="400"><br />
-<b><i>Container and service monitoring dashboard</i></b>
-<br />
-<b>🌐 <a href="https://github.com/dougmaitelli/DockDash">github.com/dougmaitelli/DockDash</a></b><br />
+### DockDash
+
+<p>
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-dockdash.png" width="84" align="left" alt="DockDash">
+  <a href="docs/apps/dockdash.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DockDash documentation" align="right"></a>
+  <a href="templates/dockdash.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash XML template" align="right"></a>
+  <a href="compose/dockdash.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash Docker Compose file" align="right"></a>
 </p>
 
-[DockDash](https://github.com/dougmaitelli/DockDash) is a self-hosted dashboard for visualizing Docker containers and network services.
+**[DockDash](https://github.com/dougmaitelli/DockDash)**  
+A Docker dashboard for monitoring containers, resource usage, image updates, health, and GitHub release notes.
 
-It automatically discovers Docker services, monitors their health and resources, detects available container image updates and displays the corresponding GitHub release notes.
+<details>
+  <summary><strong>Quick information</strong></summary>
 
-DockDash is particularly useful for keeping track of versioned Docker images without having to manually visit the GitHub repository of every application.
+  - **Category:** Docker / Monitoring
+  - **Docker image:** `ghcr.io/dougmaitelli/dockdash:latest`
+  - **Container port:** `3001` (Unraid host port defaults to `4001`)
+  - **Upstream license:** AGPL-3.0
+  - **Security:** Authentication is not enforced by default. Read the dedicated guide before exposing DockDash to a network.
+</details>
 
-- Docker image: `ghcr.io/dougmaitelli/dockdash:latest`
-- Default container port: `3001`
-- Unraid host port: `4001`
-- Docker network: `bridge`
-- Docker provider: Docker socket
-- Update monitoring: semantic-version aware
-- GitHub release notes: supported
-- Authentication: **not enforced by default**
-- License: AGPL-3.0
-
----
-
-## Installing DockDash on Unraid
-
-The `templates/dockdash.xml` file is intended for use with **Unraid Community Applications**.
-
-The template configures:
-
-- DockDash Docker image
-- Standard Docker `bridge` network
-- Docker socket access
-- Persistent application data
-- HTTP port `4001 → 3001`
-- Update monitoring
-- Network discovery
-- Health monitoring
-- Resource monitoring
-
-The default configuration stores DockDash application data in:
-
-```text
-/mnt/user/appdata/dockdash
-```
-
-and mounts it inside the container as:
-
-```text
-/app/data
-```
-
-The Docker socket is mounted as:
-
-```text
-/var/run/docker.sock
-```
+<br clear="all">
 
 ---
 
-## ⚠️ Security warning
-
-**DockDash does not enforce authentication by default.**
-
-This is particularly important because DockDash requires access to the Docker socket and provides powerful Docker management features.
-
-Depending on the configuration, DockDash can:
-
-- start, stop and restart containers
-- execute commands inside containers
-- access container filesystems
-- view Docker logs
-- monitor resources
-- manage Docker services
-
-Access to the Docker socket can effectively provide **root-level control over the Docker host**.
-
-Therefore:
-
-> **Do not expose DockDash directly to the Internet or to an untrusted network without an authentication layer.**
-
-For a typical self-hosted installation, protect DockDash using either its built-in OIDC authentication or an authenticated reverse proxy.
-
----
-
-## Authentication
-
-DockDash supports two main approaches for protecting the interface.
-
-### Option 1 — Built-in OIDC
-
-DockDash supports OpenID Connect authentication with providers such as:
-
-- Authentik
-- Authelia
-- Keycloak
-- Google
-- Other compatible OIDC providers
-
-OIDC can be configured using environment variables such as:
-
-```text
-OIDC_ISSUER
-OIDC_CLIENT_ID
-OIDC_CLIENT_SECRET
-SESSION_SECRET
-```
-
-Refer to the official DockDash documentation for the complete OIDC configuration.
-
-### Option 2 — Reverse proxy authentication
-
-DockDash can also be placed behind a reverse proxy and protected by an external authentication layer.
-
-Examples include:
-
-- Traefik + Authentik
-- Traefik + Authelia
-- Caddy + authentication middleware
-- Nginx + authentication
-- oauth2-proxy
-- TinyAuth
-- Other trusted authentication solutions
-
-This approach can be particularly convenient in an existing self-hosted infrastructure where authentication is already centralized.
-
----
-
-## DockDash configuration
-
-The Unraid template exposes the most useful DockDash configuration parameters.
-
-### Basic configuration
-
-| Parameter | Default | Description |
-|---|---:|---|
-| HTTP Port | `4001 → 3001` | Port used to access the DockDash web interface |
-| DockDash Data | `/mnt/user/appdata/dockdash` | Persistent application data |
-| Docker Socket | `/var/run/docker.sock` | Docker API access |
-
-### Advanced configuration
-
-| Variable | Default | Description |
-|---|---:|---|
-| `LOG_LEVEL` | `info` | DockDash logging level |
-| `NETWORK_CIDRS` | `192.168.0.1/24` | Network ranges used for network discovery |
-| `HEALTH_CHECK_INTERVAL` | `30000` | Health check interval in milliseconds |
-| `RESOURCE_MONITOR_INTERVAL` | `5000` | Resource monitoring interval in milliseconds |
-| `UPDATE_CHECK_INTERVAL` | `3600000` | Docker image update check interval in milliseconds |
-
-The `NETWORK_CIDRS` value should be adapted to the local network if necessary.
-
-For example:
-
-```text
-192.168.0.0/24
-```
-
-or another CIDR corresponding to your local network.
-
----
-
-## DockDash update monitoring
-
-One of DockDash's main features is its **semantic-version-aware Docker image update monitoring**.
-
-Instead of simply reporting that a Docker image has changed, DockDash can compare the version actually running with newer compatible versions published by the registry.
-
-For example:
-
-```text
-Running:
-1.25.0
-
-Available:
-1.26.0
-```
-
-DockDash can report:
-
-```text
-1.25.0 → 1.26.0
-```
-
-It can then resolve the source repository and retrieve the corresponding GitHub release notes.
-
-This makes it possible to see:
-
-```text
-Application
-Current version → Available version
-          │
-          ▼
-      GitHub Release
-          │
-          ▼
-       Changelog
-```
-
-This is particularly useful when managing a large number of self-hosted applications.
-
-Instead of manually checking each GitHub repository, DockDash provides the update information and associated release notes directly from the dashboard.
-
-DockDash also supports digest-based detection for floating tags such as:
-
-```text
-latest
-stable
-dev
-```
-
----
-
-## DockDash architecture
-
-A basic Unraid installation looks like this:
-
-```text
-                         Unraid
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │    DockDash   │
-                    │    :3001      │
-                    └───────┬───────┘
-                            │
-                     Docker Socket
-                            │
-                            ▼
-                     Docker Engine
-                            │
-        ┌───────────────────┼───────────────────┐
-        ▼                   ▼                   ▼
-    Sablier             Traefik            Vaultwarden
-        │                   │                   │
-        ▼                   ▼                   ▼
-      Other              Other               Other
-    containers          containers          containers
-```
-
-DockDash reads Docker information through:
-
-```text
-/var/run/docker.sock
-```
-
-and provides a centralized view of the Docker environment.
-
-It can monitor:
-
-- container health
-- CPU and memory usage
-- network and disk I/O
-- Docker image versions
-- available updates
-- GitHub changelogs
-- Docker logs
-- container filesystem
-- container terminal
-- service topology
-
----
-
-## Docker socket hardening
-
-For advanced deployments, the Docker socket can be exposed through a restricted Docker socket proxy rather than mounting the host socket directly.
-
-A solution such as:
-
-```text
-tecnativa/docker-socket-proxy
-```
-
-can be used to limit the Docker API operations available to DockDash.
-
-This is an advanced configuration and is not required for the standard Unraid template.
-
----
-
-## DockDash useful links
-
-- **GitHub repository:** https://github.com/dougmaitelli/DockDash
-- **Docker image:** https://github.com/dougmaitelli/DockDash/pkgs/container/dockdash
-- **Security policy:** https://github.com/dougmaitelli/DockDash/blob/main/SECURITY.md
-
-
----
-
-## Portabase Agent
-
-<p align="center">
-<img src="https://github.com/Portabase/portabase/raw/main/.github/assets/logo.png" alt="Portabase Agent" width="96"><br />
-<b><i>Database backup and restore agent for Portabase</i></b>
-<br />
-<b>🌐 <a href="https://portabase.io/">portabase.io</a></b><br />
+### Portabase Agent
+
+<p>
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-portabase.png" width="84" align="left" alt="Portabase Agent">
+  <a href="docs/apps/portabase-agent.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Portabase Agent documentation" align="right"></a>
+  <a href="templates/portabase-agent.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent XML template" align="right"></a>
+  <a href="compose/portabase-agent.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent Docker Compose file" align="right"></a>
 </p>
 
-[Portabase Agent](https://portabase.io/) is a background service that connects a Portabase Dashboard to database servers and executes backup and restore tasks configured through the dashboard.
+**[Portabase Agent](https://portabase.io/)**  
+A background agent that connects Portabase to database servers for configured backup and restore operations. It does not require a web interface or a published web port.
 
-- Docker image: `portabase/agent:latest`
-- Container type: background service
-- Web interface: none
-- Published ports: none required by the template
-- Authentication: `EDGE_KEY` generated by the Portabase Dashboard
-- Timezone default: `Europe/Paris`
-- Polling interval default: `5` seconds
+<details>
+  <summary><strong>Quick information</strong></summary>
 
-## Installing Portabase Agent on Unraid
+  - **Category:** Backup / Database
+  - **Docker image:** `portabase/agent:latest`
+  - **Web interface:** None
+  - **Authentication:** Uses an `EDGE_KEY` generated by the Portabase Dashboard
+  - **License:** Refer to the upstream project for the applicable license terms.
+</details>
 
-The `templates/portabase-agent.xml` file is intended for use with **Unraid Community Applications**.
-
-The template configures:
-
-- Portabase Agent Docker image
-- Required `EDGE_KEY` environment variable, masked in the Unraid interface
-- Timezone configuration
-- Optional task polling interval
-- Persistent agent data directory
-- Optional agent configuration directory
-- Standard Docker `bridge` network by default
-- No published web port and no WebUI, because the agent runs in the background
-
-Generate an Edge Key for the agent in your Portabase Dashboard and enter it during installation. Treat this key as a secret: do not publish it in screenshots, XML templates, source control or logs shared publicly.
-
-## Portabase Agent configuration
-
-The Unraid template exposes the following parameters:
-
-| Parameter | Default | Description |
-|---|---|---|
-| `EDGE_KEY` | Required | Edge Key generated by Portabase Dashboard for this agent. The value is masked in the Unraid form. |
-| `TZ` | `Europe/Paris` | Timezone used by the container. |
-| `POLLING` | `5` | Interval between agent task checks, in seconds. |
-| Agent Data | `/mnt/user/appdata/portabase/agent/data` | Persistent directory mounted inside the container as `/data`. |
-| Agent Configuration | `/mnt/user/appdata/portabase/agent/config` | Optional directory mounted inside the container as `/config`. Dashboard-defined connections may not require local configuration files. |
-
-The template uses Docker's `bridge` network by default. You can change the network in Unraid if your deployment requires the agent to communicate directly with other containers on a custom Docker network.
-
-## Network and database access
-
-The agent must be able to reach:
-
-1. The Portabase Dashboard URL encoded in its Edge Key, typically over HTTPS.
-2. Each database server configured in Portabase.
-
-If a database runs in another Docker container, ensure that the agent can reach it through a shared Docker network or a suitable host-reachable address and published database port. Do not expose database services to the public Internet just to make them reachable by the agent.
-
-Use dedicated database credentials with only the permissions needed for the backup and restore operations you intend to perform. The exact permissions depend on the database engine, the backup/restore method and the restore options. Test restoration against a separate test database before relying on the setup for production data.
-
-The agent does not need a public HTTP port or a reverse-proxy route. Keep `EDGE_KEY` confidential and regenerate it from Portabase if it is exposed or compromised.
-
-## Portabase Agent useful links
-
-- **Official website:** https://portabase.io/
-- **GitHub repository:** https://github.com/Portabase/portabase
-- **Official documentation:** https://portabase.io/docs/
-- **Docker image:** https://hub.docker.com/r/portabase/agent
+<br clear="all">
 
 ---
 
-## Web-Check
+### Web-Check
 
-<p align="center">
-<img src="https://cdn.as93.net/logo/web-check/w256" width="96" /><br />
-<b><i>Comprehensive, on-demand open source intelligence for any website</i></b>
-<br />
-<b>🌐 <a href="https://web-check.xyz/">web-check.xyz</a></b><br />
+<p>
+  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-web-check.png" width="84" align="left" alt="Web-Check">
+  <a href="docs/apps/web-check.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Web-Check documentation" align="right"></a>
+  <a href="templates/web-check.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check XML template" align="right"></a>
+  <a href="compose/web-check.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check Docker Compose file" align="right"></a>
 </p>
 
-[Web-Check](https://web-check.xyz/) is an open-source OSINT tool for analysing websites and domains.
+**[Web-Check](https://web-check.xyz/)**  
+An open-source OSINT tool for inspecting websites and domains, including DNS records, TLS certificates, HTTP headers, trackers, redirects, and other technical signals.
 
-It provides a broad range of checks covering IP addresses, SSL certificates, DNS records, HTTP headers, cookies, redirects, open ports, traceroute, DNS security, performance, trackers, associated hostnames and other website intelligence.
+<details>
+  <summary><strong>Quick information</strong></summary>
 
-- Docker image: `lissy93/web-check:latest`
-- Default container port: `3000`
-- Docker network: `bridge`
-- API keys: optional
-- License: MIT
+  - **Category:** Security / OSINT
+  - **Docker image:** `lissy93/web-check:latest`
+  - **Default port:** `3000`
+  - **API keys:** Optional for supported third-party integrations
+  - **Upstream license:** MIT
+</details>
 
----
-
-## Installing Web-Check on Unraid
-
-The `templates/web-check.xml` file is intended for use with **Unraid Community Applications**.
-
-The template configures:
-
-- Web-Check Docker image
-- Standard Docker `bridge` network
-- HTTP port `3000`
-- Optional API keys
-- Optional API and scan configuration
-
-Web-Check does not require a persistent application volume for its standard deployment.
-
-### Web-Check configuration
-
-The template exposes optional API keys and advanced configuration parameters for users who want to enable additional checks or adapt Web-Check to their environment.
-
-| Parameter | Default | Description |
-|---|---:|---|
-| HTTP Port | `3000` | Port used to access the Web-Check web interface |
-| `GOOGLE_CLOUD_API_KEY` | — | Optional Google Cloud API key |
-| `SHODAN_API_KEY` | — | Optional Shodan API key |
-| `WHO_API_KEY` | — | Optional WhoAPI key |
-| `SECURITY_TRAILS_API_KEY` | — | Optional SecurityTrails API key |
-| `URL_SCAN_API_KEY` | — | Optional URLScan API key |
-| `CLOUDMERSIVE_API_KEY` | — | Optional Cloudmersive API key |
-| `TRANCO_USERNAME` | — | Optional Tranco username |
-| `TRANCO_API_KEY` | — | Optional Tranco API key |
-| `TORRENT_IP_API_KEY` | — | Optional Torrent IP API key |
-| `BUILT_WITH_API_KEY` | — | Optional BuiltWith API key |
-| `API_ENABLE_RATE_LIMIT` | `true` | Enable API rate limiting |
-| `PUBLIC_API_TIMEOUT_LIMIT` | `25000` | Maximum API request timeout in milliseconds |
-| `API_CORS_ORIGIN` | — | Optional API CORS origin |
-| `API_DISABLED_CHECKS` | — | Optional comma-separated list of checks to disable |
-| `API_ENABLED_CHECKS` | — | Optional comma-separated list of checks to enable exclusively |
-| `API_BLOCKED_HOSTS` | — | Optional hosts or networks that must not be scanned |
-| `TRUST_PROXY` | — | Optional reverse proxy trust configuration |
-
-### Web-Check and external services
-
-Web-Check can use optional third-party APIs to enrich its results. API keys are not required for the core functionality.
-
-If API keys are configured, review the relevant provider's terms and data handling before using them in a production environment.
-
-### Web-Check useful links
-
-- **Official website:** https://web-check.xyz/
-- **GitHub repository:** https://github.com/Lissy93/web-check
-- **Docker image:** https://hub.docker.com/r/lissy93/web-check
+<br clear="all">
 
 ---
 
-# Repository structure
+### PhotoCraft Web
+
+<p>
+  <img src="https://raw.githubusercontent.com/storytold/photocraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.photocraft.png" width="84" align="left" alt="PhotoCraft Web">
+  <a href="docs/apps/photocraft-web.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="PhotoCraft Web documentation" align="right"></a>
+  <a href="templates/photocraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web XML template" align="right"></a>
+  <a href="compose/photocraft-web.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web Docker Compose file" align="right"></a>
+</p>
+
+**[PhotoCraft Web](https://github.com/storytold/photocraft)**  
+A browser-based image editor hosted on your own server. This community-maintained Docker image serves PhotoCraft's WebAssembly application through NGINX; image files are opened and exported through your browser rather than stored by the container.
+
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Graphics / Image Editing
+  - **Docker image:** `ghcr.io/mikapst/photocraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official PhotoCraft image
+  - **Upstream status:** PhotoCraft is under active development; review the upstream project notes before relying on it for important work
+</details>
+
+<br clear="all">
+
+---
+
+## Installation
+
+### Through Unraid Community Applications
+
+1. Open **Apps** in the Unraid web interface.
+2. Search for the application by name.
+3. Open its listing, review the template settings, and install it.
+4. Follow the application's documentation for any additional configuration.
+
+### Using a template XML directly
+
+Each XML template is stored in [`templates/`](templates/). The raw URL for a template follows this pattern:
+
+```text
+https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/sablier.xml
+```
+
+Replace `sablier.xml` with the XML file for the application you need.
+
+### Using Docker Compose
+
+Each application also has an example Compose file in [`compose/`](compose/). Review the file and adapt host paths, ports, networks, and environment variables to your setup before starting it.
+
+```bash
+docker compose -f compose/web-check.yml up -d
+```
+
+For **Portabase Agent**, supply the required `EDGE_KEY` before starting the service. The **Sablier** example expects an existing external Docker network named `traefik`. **DockDash** has access to the Docker socket and does not enforce authentication by default, so do not expose it to an untrusted network without adding an authentication layer.
+
+> These Compose files are deployment examples and complement the Unraid XML templates; they do not replace them.
+
+> **Security note:** Read the application guide before exposing a service outside your local network. Applications with Docker socket access or powerful container-management features require particular care.
+
+## Repository structure
 
 ```text
 .
@@ -789,64 +201,55 @@ If API keys are configured, review the relevant provider's terms and data handli
 │   ├── icon-dockdash.png
 │   ├── icon-portabase.png
 │   └── icon-web-check.png
-└── templates/
-    ├── sablier.xml
-    ├── dockdash.xml
-    ├── portabase-agent.xml
-    └── web-check.xml
+├── templates/
+│   ├── sablier.xml
+│   ├── dockdash.xml
+│   ├── portabase-agent.xml
+│   ├── web-check.xml
+│   └── photocraft-web.xml
+├── compose/
+│   ├── sablier.yml
+│   ├── dockdash.yml
+│   ├── portabase-agent.yml
+│   ├── web-check.yml
+│   └── photocraft-web.yml
+└── docs/
+    └── apps/
+        ├── sablier.md
+        ├── dockdash.md
+        ├── portabase-agent.md
+        ├── web-check.md
+        └── photocraft-web.md
 ```
 
-Each Docker application has its own XML template under:
+- **`templates/`** — XML templates used by Unraid Community Applications.
+- **`docs/apps/`** — dedicated application guides, configuration details, troubleshooting, and upstream links.
+- **`compose/`** — example Docker Compose YAML files for users who prefer Compose-based deployments.
+- **`icons/`** — the repository logo and application icons.
+- **`ca_profile.xml`** — repository profile information used by Community Applications.
 
-```text
-templates/
-```
+The root README is the catalogue and navigation page. Detailed instructions belong in each application's documentation file.
 
-For example:
+## Support
 
-```text
-templates/sablier.xml
-templates/dockdash.xml
-templates/portabase-agent.xml
-```
+For issues with an application's features or behaviour, start with the upstream project:
 
-Application icons and the repository logo are stored in the `icons/` directory and referenced directly by their corresponding templates and README entries.
+- **Sablier:** [GitHub repository](https://github.com/sablierapp/sablier)
+- **DockDash:** [GitHub repository](https://github.com/dougmaitelli/DockDash)
+- **Portabase Agent:** [Official website](https://portabase.io/) · [GitHub repository](https://github.com/Portabase/portabase)
+- **Web-Check:** [GitHub repository](https://github.com/Lissy93/web-check)
+- **PhotoCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/photocraft-web) · [Upstream PhotoCraft](https://github.com/storytold/photocraft)
 
----
+For issues specific to the Unraid templates maintained in this repository, please [open a GitHub issue](https://github.com/MikaPST/unraid-community-apps/issues).
 
-# Support
+## Licenses
 
-For issues concerning an **application itself**, please refer to the official project repository.
-
-### Sablier
-
-https://github.com/sablierapp/sablier
-
-### DockDash
-
-https://github.com/dougmaitelli/DockDash
-
-### Web-Check
-
-https://github.com/Lissy93/web-check
-
-### Portabase Agent
-
-https://portabase.io/
-
-For issues specifically related to the **Unraid templates maintained in this repository**, please open an issue in this GitHub repository.
-
----
-
-# License
-
-This repository contains Unraid application templates maintained by MikaPST.
-
-Each application remains subject to its own upstream license:
+This repository contains Unraid application templates maintained by MikaPST. Each application remains subject to its own upstream license:
 
 - **Sablier:** Apache License 2.0
 - **DockDash:** GNU Affero General Public License v3.0
 - **Web-Check:** MIT License
-- **Portabase Agent:** refer to the upstream project for its current license terms.
+- **PhotoCraft:** the upstream project is dual-licensed under MIT or Apache License 2.0; see its license and attribution files. The MikaPST Docker packaging project and this template repository have their own repository-level license terms.
+- **Portabase Agent:** refer to the upstream project for its applicable license terms.
 
-The repository itself is distributed under the license specified in `LICENSE`.
+The repository itself is distributed under the license specified in [`LICENSE`](LICENSE).
