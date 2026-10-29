@@ -1,0 +1,35 @@
+services:
+  dockdash:
+    image: ghcr.io/dougmaitelli/dockdash:latest
+    container_name: dockdash
+    restart: unless-stopped
+
+    ports:
+      - "3001:3001"
+
+    environment:
+      PORT: "3001"
+      LOG_LEVEL: "info"
+
+      # IMPORTANT: replace with your actual LAN CIDR.
+      # Example: 192.168.1.0/24
+      NETWORK_CIDRS: "${NETWORK_CIDRS:-192.168.0.0/24}"
+
+      HEALTH_CHECK_INTERVAL: "30000"
+      RESOURCE_MONITOR_INTERVAL: "5000"
+      UPDATE_CHECK_INTERVAL: "3600000"
+
+    volumes:
+      # Persistent DockDash data
+      - /mnt/user/appdata/dockdash:/app/data
+
+      # Docker API access for container discovery and management
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    networks:
+      - bridge
+
+networks:
+  bridge:
+    name: bridge
+    external: true
