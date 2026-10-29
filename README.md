@@ -27,17 +27,14 @@ This repository aims to make useful self-hosted tools easier to deploy and maint
 
 ### Sablier
 
-<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-sablier.png" width="84" alt="Sablier">
-  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
-    <a href="docs/apps/sablier.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Sablier documentation"></a>
-    <a href="templates/sablier.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier XML template"></a>
-    <a href="compose/sablier.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier Docker Compose file"></a>
-  </div>
-</div>
+<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-sablier.png" width="84" align="left" alt="Sablier">
 
 **[Sablier](https://sablierapp.dev/)**  
 Docker-aware middleware that can start and stop containers based on incoming requests. It works with reverse proxies such as Traefik to help reduce resource usage when applications are idle.
+
+<a href="docs/apps/sablier.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Sablier documentation"></a>&nbsp;
+<a href="templates/sablier.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier XML template"></a>&nbsp;
+<a href="compose/sablier.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier Docker Compose file"></a>
 
 <details>
   <summary><strong>Quick information</strong></summary>
@@ -50,20 +47,16 @@ Docker-aware middleware that can start and stop containers based on incoming req
 
 <br clear="all">
 
-
 ### DockDash
 
-<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-dockdash.png" width="84" alt="DockDash">
-  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
-    <a href="docs/apps/dockdash.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DockDash documentation"></a>
-    <a href="templates/dockdash.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash XML template"></a>
-    <a href="compose/dockdash.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash Docker Compose file"></a>
-  </div>
-</div>
+<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-dockdash.png" width="84" align="left" alt="DockDash">
 
 **[DockDash](https://github.com/dougmaitelli/DockDash)**  
 A Docker dashboard for monitoring containers, resource usage, image updates, health, and GitHub release notes.
+
+<a href="docs/apps/dockdash.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DockDash documentation"></a>&nbsp;
+<a href="templates/dockdash.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash XML template"></a>&nbsp;
+<a href="compose/dockdash.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash Docker Compose file"></a>
 
 <details>
   <summary><strong>Quick information</strong></summary>
@@ -77,20 +70,16 @@ A Docker dashboard for monitoring containers, resource usage, image updates, hea
 
 <br clear="all">
 
-
 ### Portabase Agent
 
-<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-portabase.png" width="84" alt="Portabase Agent">
-  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
-    <a href="docs/apps/portabase-agent.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Portabase Agent documentation"></a>
-    <a href="templates/portabase-agent.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent XML template"></a>
-    <a href="compose/portabase-agent.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent Docker Compose file"></a>
-  </div>
-</div>
+<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-portabase.png" width="84" align="left" alt="Portabase Agent">
 
 **[Portabase Agent](https://portabase.io/)**  
 A background agent that connects Portabase to database servers for configured backup and restore operations. It does not require a web interface or a published web port.
+
+<a href="docs/apps/portabase-agent.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Portabase Agent documentation"></a>&nbsp;
+<a href="templates/portabase-agent.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent XML template"></a>&nbsp;
+<a href="compose/portabase-agent.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent Docker Compose file"></a>
 
 <details>
   <summary><strong>Quick information</strong></summary>
@@ -104,20 +93,16 @@ A background agent that connects Portabase to database servers for configured ba
 
 <br clear="all">
 
-
 ### Web-Check
 
-<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-web-check.png" width="84" alt="Web-Check">
-  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
-    <a href="docs/apps/web-check.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Web-Check documentation"></a>
-    <a href="templates/web-check.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check XML template"></a>
-    <a href="compose/web-check.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check Docker Compose file"></a>
-  </div>
-</div>
+<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-web-check.png" width="84" align="left" alt="Web-Check">
 
 **[Web-Check](https://web-check.xyz/)**  
 An open-source OSINT tool for inspecting websites and domains, including DNS records, TLS certificates, HTTP headers, trackers, redirects, and other technical signals.
+
+<a href="docs/apps/web-check.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Web-Check documentation"></a>&nbsp;
+<a href="templates/web-check.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check XML template"></a>&nbsp;
+<a href="compose/web-check.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check Docker Compose file"></a>
 
 <details>
   <summary><strong>Quick information</strong></summary>
@@ -131,20 +116,16 @@ An open-source OSINT tool for inspecting websites and domains, including DNS rec
 
 <br clear="all">
 
-
 ### PhotoCraft Web
 
-<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/storytold/photocraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.photocraft.png" width="84" alt="PhotoCraft Web">
-  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
-    <a href="docs/apps/photocraft-web.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="PhotoCraft Web documentation"></a>
-    <a href="templates/photocraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web XML template"></a>
-    <a href="compose/photocraft-web.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web Docker Compose file"></a>
-  </div>
-</div>
+<img src="https://raw.githubusercontent.com/storytold/photocraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.photocraft.png" width="84" align="left" alt="PhotoCraft Web">
 
 **[PhotoCraft Web](https://github.com/storytold/photocraft)**  
 A browser-based image editor hosted on your own server. This community-maintained Docker image serves PhotoCraft's WebAssembly application through NGINX; image files are opened and exported through your browser rather than stored by the container.
+
+<a href="docs/apps/photocraft-web.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="PhotoCraft Web documentation"></a>&nbsp;
+<a href="templates/photocraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web XML template"></a>&nbsp;
+<a href="compose/photocraft-web.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web Docker Compose file"></a>
 
 <details>
   <summary><strong>Quick information</strong></summary>
@@ -161,16 +142,12 @@ A browser-based image editor hosted on your own server. This community-maintaine
 
 ### FilmCraft Web
 
-<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-filmcraft-web.png" width="84" alt="FilmCraft Web">
-  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
-    <a href="templates/filmcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="FilmCraft Web XML template"></a>
-    <a href="https://github.com/MikaPST/filmcraft-web"><img src="https://img.shields.io/badge/Docker%20Image-GHCR-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="FilmCraft Web Docker image and packaging"></a>
-  </div>
-</div>
+<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-filmcraft-web.png" width="84" align="left" alt="FilmCraft Web">
 
 **[FilmCraft Web](https://github.com/storytold/filmcraft)**  
 A browser-based video editor served by a community-maintained Docker image. The container serves FilmCraft's WebAssembly application through NGINX; video editing runs in the browser rather than in a remote desktop environment.
+
+<a href="templates/filmcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="FilmCraft Web XML template"></a>
 
 <details>
   <summary><strong>Quick information</strong></summary>
@@ -185,7 +162,6 @@ A browser-based video editor served by a community-maintained Docker image. The 
 <br clear="all">
 
 ## Installation
-
 ### Through Unraid Community Applications
 
 1. Open **Apps** in the Unraid web interface.
