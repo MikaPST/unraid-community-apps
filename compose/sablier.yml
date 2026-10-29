@@ -1,0 +1,29 @@
+services:
+  sablier:
+    image: sablierapp/sablier:1.18.0
+    container_name: sablier
+    restart: unless-stopped
+
+    command:
+      - start
+      - --provider.name=docker
+
+    volumes:
+      # Docker API: required to discover, start and stop containers
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+
+      # Persistent Sablier configuration
+      - /mnt/user/appdata/sablier/sablier.yml:/etc/sablier/sablier.yml:ro
+
+      # Optional custom waiting-page themes
+      - /mnt/user/appdata/sablier/themes:/etc/sablier/themes:ro
+
+    networks:
+      - traefik
+
+    expose:
+      - "10000"
+
+networks:
+  traefik:
+    external: true
