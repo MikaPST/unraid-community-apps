@@ -32,10 +32,9 @@ This repository aims to make useful self-hosted tools easier to deploy and maint
 **[Sablier](https://sablierapp.dev/)**  
 Docker-aware middleware that can start and stop containers based on incoming requests. It works with reverse proxies such as Traefik to help reduce resource usage when applications are idle.
 
-<a href="docs/apps/sablier.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Sablier documentation"></a>&nbsp;
+<div style="clear: left; padding-top: 12px;"><a href="docs/apps/sablier.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Sablier documentation"></a>&nbsp;
 <a href="templates/sablier.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier XML template"></a>&nbsp;
-<a href="compose/sablier.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier Docker Compose file"></a>
-
+<a href="compose/sablier.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Sablier Docker Compose file"></a></div>
 <details>
   <summary><strong>Quick information</strong></summary>
 
@@ -54,10 +53,9 @@ Docker-aware middleware that can start and stop containers based on incoming req
 **[DockDash](https://github.com/dougmaitelli/DockDash)**  
 A Docker dashboard for monitoring containers, resource usage, image updates, health, and GitHub release notes.
 
-<a href="docs/apps/dockdash.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DockDash documentation"></a>&nbsp;
+<div style="clear: left; padding-top: 12px;"><a href="docs/apps/dockdash.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DockDash documentation"></a>&nbsp;
 <a href="templates/dockdash.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash XML template"></a>&nbsp;
-<a href="compose/dockdash.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash Docker Compose file"></a>
-
+<a href="compose/dockdash.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DockDash Docker Compose file"></a></div>
 <details>
   <summary><strong>Quick information</strong></summary>
 
@@ -77,10 +75,9 @@ A Docker dashboard for monitoring containers, resource usage, image updates, hea
 **[Portabase Agent](https://portabase.io/)**  
 A background agent that connects Portabase to database servers for configured backup and restore operations. It does not require a web interface or a published web port.
 
-<a href="docs/apps/portabase-agent.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Portabase Agent documentation"></a>&nbsp;
+<div style="clear: left; padding-top: 12px;"><a href="docs/apps/portabase-agent.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Portabase Agent documentation"></a>&nbsp;
 <a href="templates/portabase-agent.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent XML template"></a>&nbsp;
-<a href="compose/portabase-agent.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent Docker Compose file"></a>
-
+<a href="compose/portabase-agent.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Portabase Agent Docker Compose file"></a></div>
 <details>
   <summary><strong>Quick information</strong></summary>
 
@@ -100,10 +97,9 @@ A background agent that connects Portabase to database servers for configured ba
 **[Web-Check](https://web-check.xyz/)**  
 An open-source OSINT tool for inspecting websites and domains, including DNS records, TLS certificates, HTTP headers, trackers, redirects, and other technical signals.
 
-<a href="docs/apps/web-check.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Web-Check documentation"></a>&nbsp;
+<div style="clear: left; padding-top: 12px;"><a href="docs/apps/web-check.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="Web-Check documentation"></a>&nbsp;
 <a href="templates/web-check.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check XML template"></a>&nbsp;
-<a href="compose/web-check.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check Docker Compose file"></a>
-
+<a href="compose/web-check.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Web-Check Docker Compose file"></a></div>
 <details>
   <summary><strong>Quick information</strong></summary>
 
@@ -123,10 +119,9 @@ An open-source OSINT tool for inspecting websites and domains, including DNS rec
 **[PhotoCraft Web](https://github.com/storytold/photocraft)**  
 A browser-based image editor hosted on your own server. This community-maintained Docker image serves PhotoCraft's WebAssembly application through NGINX; image files are opened and exported through your browser rather than stored by the container.
 
-<a href="docs/apps/photocraft-web.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="PhotoCraft Web documentation"></a>&nbsp;
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/photocraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="PhotoCraft Web documentation"></a>&nbsp;
 <a href="templates/photocraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web XML template"></a>&nbsp;
-<a href="compose/photocraft-web.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web Docker Compose file"></a>
-
+<a href="https://github.com/MikaPST/photocraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="PhotoCraft Web Docker Compose file"></a></div>
 <details>
   <summary><strong>Quick information</strong></summary>
 
@@ -147,8 +142,9 @@ A browser-based image editor hosted on your own server. This community-maintaine
 **[FilmCraft Web](https://github.com/storytold/filmcraft)**  
 A browser-based video editor served by a community-maintained Docker image. The container serves FilmCraft's WebAssembly application through NGINX; video editing runs in the browser rather than in a remote desktop environment.
 
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/filmcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="FilmCraft Web documentation"></a>&nbsp;
 <a href="templates/filmcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="FilmCraft Web XML template"></a>
-
+<a href="https://github.com/MikaPST/filmcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="FilmCraft Web Docker Compose file"></a></div>
 <details>
   <summary><strong>Quick information</strong></summary>
 
