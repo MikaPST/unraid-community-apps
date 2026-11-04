@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>figcraft-web</Name>
+  <Repository>ghcr.io/mikapst/figcraft-web:latest</Repository>
+  <Registry>https://github.com/MikaPST/figcraft-web/pkgs/container/figcraft-web</Registry>
+
+  <!-- Default network for standard Unraid Docker deployments.
+       Users can change this to their preferred Docker network. -->
+  <Network>bridge</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- FigCraft Web icon -->
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-figcraft-web.png</Icon>
+
+  <!-- FigCraft Web interface -->
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+
+  <Overview>
+    FigCraft Web is a community-maintained Docker image that serves FigCraft, an interface design and prototyping application, through a browser-based WebAssembly frontend. The application provides tools for designing and prototyping user interfaces in the browser. This container packages the web frontend only; it does not add a hosted collaboration service, remote desktop, or server-side project backend.
+  </Overview>
+
+  <Project>https://github.com/storytold/figcraft</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/figcraft-web.xml</TemplateURL>
+
+  <ReadMe>https://github.com/MikaPST/figcraft-web/blob/main/README.md</ReadMe>
+
+  <Category>Productivity:</Category>
+
+  <ExtraSearchTerms>
+    FigCraft Fig Craft UI UX Interface Design Prototyping Wireframing User Interface Browser WebAssembly WASM
+  </ExtraSearchTerms>
+
+  <Requires>
+    No special privileges, database, or persistent data volumes are required for the standard deployment. The web interface is served over HTTP on container port 8080. Project file handling and browser features depend on the upstream web application and the user's browser. Use HTTPS through a reverse proxy for remote access when required by browser security restrictions.
+  </Requires>
+
+  <Changes>
+    Initial release - FigCraft Web
+  </Changes>
+
+  <Date>2026-11-04</Date>
+
+  <MinVer>6.1</MinVer>
+
+  <License>MIT OR Apache-2.0</License>
+
+  <!-- ========================= -->
+  <!-- FIGCRAFT WEB HTTP PORT -->
+  <!-- ========================= -->
+
+  <Config
+    Name="HTTP Port"
+    Target="8080"
+    Default="8086"
+    Mode="tcp"
+    Description="Host port used to access the FigCraft Web interface. The container listens on port 8080."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+</Container>

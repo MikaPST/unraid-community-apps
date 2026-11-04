@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>vectorcraft-web</Name>
+  <Repository>ghcr.io/mikapst/vectorcraft-web:latest</Repository>
+  <Registry>https://github.com/MikaPST/vectorcraft-web/pkgs/container/vectorcraft-web</Registry>
+
+  <!-- Default network for standard Unraid Docker deployments.
+       Users can change this to their preferred Docker network. -->
+  <Network>bridge</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- VectorCraft Web icon -->
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-vectorcraft-web.png</Icon>
+
+  <!-- VectorCraft Web interface -->
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+
+  <Overview>
+    VectorCraft Web is a community-maintained Docker image that serves the VectorCraft vector graphics editor through a browser-based WebAssembly application. Create and edit vector artwork directly in a modern browser. The application is rendered on the user's device using WebGPU where available, with WebGL2 as a fallback. The container only serves the static web application through NGINX; it does not provide a remote desktop, server-side graphics processing, or centralized artwork storage.
+  </Overview>
+
+  <Project>https://github.com/storytold/vectorcraft</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/vectorcraft-web.xml</TemplateURL>
+
+  <ReadMe>https://github.com/MikaPST/vectorcraft-web/blob/main/README.md</ReadMe>
+
+  <Category>Tools:Utilities</Category>
+
+  <ExtraSearchTerms>
+    VectorCraft Vector Craft Vector Graphics SVG Editor Drawing Illustration Browser WebAssembly WASM
+  </ExtraSearchTerms>
+
+  <Requires>
+    No special privileges, database, or persistent data volumes are required for the standard deployment. The web interface is served over HTTP on container port 8080. WebGPU requires a secure browser context; use HTTPS through a reverse proxy such as Traefik for remote access. Browser and device support determine whether WebGPU or the WebGL2 fallback is used.
+  </Requires>
+
+  <Changes>
+    Initial release - VectorCraft Web
+  </Changes>
+
+  <Date>2026-11-04</Date>
+
+  <MinVer>6.1</MinVer>
+
+  <License>MIT OR Apache-2.0</License>
+
+  <!-- ========================= -->
+  <!-- VECTORCRAFT WEB HTTP PORT -->
+  <!-- ========================= -->
+
+  <Config
+    Name="HTTP Port"
+    Target="8080"
+    Default="8081"
+    Mode="tcp"
+    Description="Host port used to access the VectorCraft Web interface. The container listens on port 8080."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+</Container>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>pdfcraft-web</Name>
+  <Repository>ghcr.io/mikapst/pdfcraft-web:latest</Repository>
+  <Registry>https://github.com/MikaPST/pdfcraft-web/pkgs/container/pdfcraft-web</Registry>
+
+  <!-- Default network for standard Unraid Docker deployments.
+       Users can change this to their preferred Docker network. -->
+  <Network>bridge</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- PdfCraft Web icon -->
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-pdfcraft-web.png</Icon>
+
+  <!-- PdfCraft Web interface -->
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+
+  <Overview>
+    PdfCraft Web is a community-maintained Docker image that serves PdfCraft, a browser-based PDF reader and editor. The upstream application includes PDF viewing and rendering, page organization, annotations, interactive forms, and document editing workflows. The WebAssembly application runs in the browser; the container only serves its static files through NGINX and does not provide server-side PDF processing or centralized document storage.
+  </Overview>
+
+  <Project>https://github.com/storytold/pdfcraft</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/pdfcraft-web.xml</TemplateURL>
+
+  <ReadMe>https://github.com/MikaPST/pdfcraft-web/blob/main/README.md</ReadMe>
+
+  <Category>Productivity:</Category>
+
+  <ExtraSearchTerms>
+    PdfCraft PDF Craft PDF Reader PDF Editor PDF Viewer PDF Tools Document Browser WebAssembly WASM
+  </ExtraSearchTerms>
+
+  <Requires>
+    No special privileges, database, or persistent data volumes are required for the standard deployment. The web interface is served over HTTP on container port 8080. Documents are handled by the browser application and browser file/download mechanisms. Use HTTPS through a reverse proxy such as Traefik for remote access.
+  </Requires>
+
+  <Changes>
+    Initial release - PdfCraft Web
+  </Changes>
+
+  <Date>2026-11-04</Date>
+
+  <MinVer>6.1</MinVer>
+
+  <License>MIT OR Apache-2.0</License>
+
+  <!-- ========================= -->
+  <!-- PDFCRAFT WEB HTTP PORT -->
+  <!-- ========================= -->
+
+  <Config
+    Name="HTTP Port"
+    Target="8080"
+    Default="8083"
+    Mode="tcp"
+    Description="Host port used to access the PdfCraft Web interface. The container listens on port 8080."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+</Container>
