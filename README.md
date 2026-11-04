@@ -157,6 +157,317 @@ A browser-based video editor served by a community-maintained Docker image. The 
 
 <br clear="all">
 
+### VectorCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/vectorcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.vectorcraft.png" width="84" align="left" alt="VectorCraft Web">
+
+**[VectorCraft Web](https://github.com/storytold/vectorcraft)**  
+A browser-based vector graphics editor powered by Rust and WebAssembly. Create and edit vector artwork directly in your browser.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/vectorcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="VectorCraft Web documentation"></a>&nbsp;
+<a href="templates/vectorcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="VectorCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/vectorcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="VectorCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Graphics / Vector Editing
+  - **Docker image:** `ghcr.io/mikapst/vectorcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official VectorCraft image
+  - **Upstream:** [VectorCraft](https://github.com/storytold/vectorcraft)
+</details>
+
+<br clear="all">
+
+
+### LightCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/lightcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.lightcraft.png" width="84" align="left" alt="LightCraft Web">
+
+**[LightCraft Web](https://github.com/storytold/lightcraft)**  
+A browser-based image editing application powered by Rust and WebAssembly, served from a lightweight self-hosted Docker image.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/lightcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="LightCraft Web documentation"></a>&nbsp;
+<a href="templates/lightcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="LightCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/lightcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="LightCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Graphics / Image Editing
+  - **Docker image:** `ghcr.io/mikapst/lightcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official LightCraft image
+  - **Upstream:** [LightCraft](https://github.com/storytold/lightcraft)
+</details>
+
+<br clear="all">
+
+
+### PdfCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/pdfcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.pdfcraft.png" width="84" align="left" alt="PdfCraft Web">
+
+**[PdfCraft Web](https://github.com/storytold/pdfcraft)**  
+A browser-based PDF application packaged as a static WebAssembly frontend and served through NGINX.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/pdfcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="PdfCraft Web documentation"></a>&nbsp;
+<a href="templates/pdfcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="PdfCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/pdfcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="PdfCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Productivity / PDF
+  - **Docker image:** `ghcr.io/mikapst/pdfcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official PdfCraft image
+  - **Upstream:** [PdfCraft](https://github.com/storytold/pdfcraft)
+</details>
+
+<br clear="all">
+
+
+### EffectCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/effectcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.effectcraft.png" width="84" align="left" alt="EffectCraft Web">
+
+**[EffectCraft Web](https://github.com/storytold/effectcraft)**  
+A browser-based motion graphics application. Its WebAssembly frontend runs in the browser and uses browser graphics capabilities for editing and rendering.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/effectcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="EffectCraft Web documentation"></a>&nbsp;
+<a href="templates/effectcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="EffectCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/effectcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="EffectCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Media / Motion Graphics
+  - **Docker image:** `ghcr.io/mikapst/effectcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official EffectCraft image
+  - **Upstream:** [EffectCraft](https://github.com/storytold/effectcraft)
+</details>
+
+<br clear="all">
+
+
+### DesignCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/designcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.designcraft.png" width="84" align="left" alt="DesignCraft Web">
+
+**[DesignCraft Web](https://github.com/storytold/designcraft)**  
+A browser-based design application built with Rust and WebAssembly, packaged for self-hosted use.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/designcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DesignCraft Web documentation"></a>&nbsp;
+<a href="templates/designcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="DesignCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/designcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DesignCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Graphics / Design
+  - **Docker image:** `ghcr.io/mikapst/designcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official DesignCraft image
+  - **Upstream:** [DesignCraft](https://github.com/storytold/designcraft)
+</details>
+
+<br clear="all">
+
+
+### FigCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/figcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.figcraft.png" width="84" align="left" alt="FigCraft Web">
+
+**[FigCraft Web](https://github.com/storytold/figcraft)**  
+A browser-based design application packaged as a static WebAssembly frontend and served through NGINX.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/figcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="FigCraft Web documentation"></a>&nbsp;
+<a href="templates/figcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="FigCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/figcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="FigCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Graphics / Design
+  - **Docker image:** `ghcr.io/mikapst/figcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official FigCraft image
+  - **Upstream:** [FigCraft](https://github.com/storytold/figcraft)
+</details>
+
+<br clear="all">
+
+
+### TextureCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/texturecraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.texturecraft.png" width="84" align="left" alt="TextureCraft Web">
+
+**[TextureCraft Web](https://github.com/storytold/texturecraft)**  
+A browser-based texture creation application packaged as a static WebAssembly frontend for self-hosted use.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/texturecraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="TextureCraft Web documentation"></a>&nbsp;
+<a href="templates/texturecraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="TextureCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/texturecraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="TextureCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Graphics / Texturing
+  - **Docker image:** `ghcr.io/mikapst/texturecraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official TextureCraft image
+  - **Upstream:** [TextureCraft](https://github.com/storytold/texturecraft)
+</details>
+
+<br clear="all">
+
+
+### MaterialCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/materialcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.materialcraft.png" width="84" align="left" alt="MaterialCraft Web">
+
+**[MaterialCraft Web](https://github.com/storytold/materialcraft)**  
+A browser-based procedural material editor with a node-based workflow and browser graphics rendering.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/materialcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="MaterialCraft Web documentation"></a>&nbsp;
+<a href="templates/materialcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="MaterialCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/materialcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="MaterialCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Graphics / 3D Materials
+  - **Docker image:** `ghcr.io/mikapst/materialcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official MaterialCraft image
+  - **Upstream:** [MaterialCraft](https://github.com/storytold/materialcraft)
+</details>
+
+<br clear="all">
+
+
+### SoundCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/soundcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.soundcraft.png" width="84" align="left" alt="SoundCraft Web">
+
+**[SoundCraft Web](https://github.com/storytold/soundcraft)**  
+A browser-based digital audio workstation using WebAssembly and Web Audio APIs. Audio processing runs in the browser.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/soundcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="SoundCraft Web documentation"></a>&nbsp;
+<a href="templates/soundcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="SoundCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/soundcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="SoundCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Audio / Music Production
+  - **Docker image:** `ghcr.io/mikapst/soundcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official SoundCraft image
+  - **Upstream:** [SoundCraft](https://github.com/storytold/soundcraft)
+</details>
+
+<br clear="all">
+
+
+### CADCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/cadcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.cadcraft.png" width="84" align="left" alt="CADCraft Web">
+
+**[CADCraft Web](https://github.com/storytold/cadcraft)**  
+A browser-based computer-aided design application for creating and editing 2D and 3D CAD projects.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/cadcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="CADCraft Web documentation"></a>&nbsp;
+<a href="templates/cadcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="CADCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/cadcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="CADCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Engineering / CAD
+  - **Docker image:** `ghcr.io/mikapst/cadcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official CADCraft image
+  - **Upstream:** [CADCraft](https://github.com/storytold/cadcraft)
+</details>
+
+<br clear="all">
+
+
+### DeckCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/deckcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.deckcraft.png" width="84" align="left" alt="DeckCraft Web">
+
+**[DeckCraft Web](https://github.com/storytold/deckcraft)**  
+A browser-based presentation editor for creating and editing slide decks through a WebAssembly application.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/deckcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="DeckCraft Web documentation"></a>&nbsp;
+<a href="templates/deckcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="DeckCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/deckcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DeckCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Productivity / Presentations
+  - **Docker image:** `ghcr.io/mikapst/deckcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official DeckCraft image
+  - **Upstream:** [DeckCraft](https://github.com/storytold/deckcraft)
+</details>
+
+<br clear="all">
+
+
+### GridCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/gridcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.gridcraft.png" width="84" align="left" alt="GridCraft Web">
+
+**[GridCraft Web](https://github.com/storytold/gridcraft)**  
+A browser-based spreadsheet application written in Rust. Workbooks are opened and saved through browser file handling.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/gridcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="GridCraft Web documentation"></a>&nbsp;
+<a href="templates/gridcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="GridCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/gridcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="GridCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Productivity / Spreadsheets
+  - **Docker image:** `ghcr.io/mikapst/gridcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official GridCraft image
+  - **Upstream:** [GridCraft](https://github.com/storytold/gridcraft)
+</details>
+
+<br clear="all">
+
+
+### WordCraft Web
+
+<img src="https://raw.githubusercontent.com/storytold/wordcraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.wordcraft.png" width="84" align="left" alt="WordCraft Web">
+
+**[WordCraft Web](https://github.com/storytold/wordcraft)**  
+A browser-based word processor powered by WebAssembly, with document opening and downloads handled by the browser.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/wordcraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="WordCraft Web documentation"></a>&nbsp;
+<a href="templates/wordcraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="WordCraft Web XML template"></a>&nbsp;
+<a href="https://github.com/MikaPST/wordcraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="WordCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Productivity / Word Processing
+  - **Docker image:** `ghcr.io/mikapst/wordcraft-web:latest`
+  - **Default port:** `8080`
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official WordCraft image
+  - **Upstream:** [WordCraft](https://github.com/storytold/wordcraft)
+</details>
+
+<br clear="all">
+
 ## Installation
 ### Through Unraid Community Applications
 
@@ -242,6 +553,19 @@ For issues with an application's features or behaviour, start with the upstream 
 - **Web-Check:** [GitHub repository](https://github.com/Lissy93/web-check)
 - **PhotoCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/photocraft-web) · [Upstream PhotoCraft](https://github.com/storytold/photocraft)
 - **FilmCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/filmcraft-web) · [Upstream FilmCraft](https://github.com/storytold/filmcraft)
+- **VectorCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/vectorcraft-web) · [Upstream VectorCraft](https://github.com/storytold/vectorcraft)
+- **LightCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/lightcraft-web) · [Upstream LightCraft](https://github.com/storytold/lightcraft)
+- **PdfCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/pdfcraft-web) · [Upstream PdfCraft](https://github.com/storytold/pdfcraft)
+- **EffectCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/effectcraft-web) · [Upstream EffectCraft](https://github.com/storytold/effectcraft)
+- **DesignCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/designcraft-web) · [Upstream DesignCraft](https://github.com/storytold/designcraft)
+- **FigCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/figcraft-web) · [Upstream FigCraft](https://github.com/storytold/figcraft)
+- **TextureCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/texturecraft-web) · [Upstream TextureCraft](https://github.com/storytold/texturecraft)
+- **MaterialCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/materialcraft-web) · [Upstream MaterialCraft](https://github.com/storytold/materialcraft)
+- **SoundCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/soundcraft-web) · [Upstream SoundCraft](https://github.com/storytold/soundcraft)
+- **CADCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/cadcraft-web) · [Upstream CADCraft](https://github.com/storytold/cadcraft)
+- **DeckCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/deckcraft-web) · [Upstream DeckCraft](https://github.com/storytold/deckcraft)
+- **GridCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/gridcraft-web) · [Upstream GridCraft](https://github.com/storytold/gridcraft)
+- **WordCraft Web:** [MikaPST Docker packaging](https://github.com/MikaPST/wordcraft-web) · [Upstream WordCraft](https://github.com/storytold/wordcraft)
 
 For issues specific to the Unraid templates maintained in this repository, please [open a GitHub issue](https://github.com/MikaPST/unraid-community-apps/issues).
 
