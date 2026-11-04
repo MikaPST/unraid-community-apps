@@ -7,7 +7,7 @@
 **Docker application templates for Unraid**
 
 [![Unraid](https://img.shields.io/badge/Unraid-Community%20Apps-blue?logo=unraid)](https://unraid.net/)
-[![Templates](https://img.shields.io/badge/Templates-6-2496ED?logo=docker)](#applications)
+[![Templates](https://img.shields.io/badge/Templates-19-2496ED?logo=docker)](#applications)
 [![GitHub](https://img.shields.io/badge/GitHub-MikaPST-black?logo=github)](https://github.com/MikaPST/unraid-community-apps)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
