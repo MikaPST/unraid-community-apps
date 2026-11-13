@@ -1,0 +1,71 @@
+
+<Container version="2">
+  <Name>anicraft-web</Name>
+  <Repository>ghcr.io/mikapst/anicraft-web:latest</Repository>
+  <Registry>https://github.com/MikaPST/anicraft-web/pkgs/container/anicraft-web</Registry>
+
+  <!-- Default network for standard Unraid Docker deployments.
+       Users can change this to their preferred Docker network. -->
+  <Network>bridge</Network>
+
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+
+  <!-- AniCraft Web icon -->
+  <Icon>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-anicraft-web.png</Icon>
+
+  <!-- AniCraft Web web interface -->
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+
+  <Overview>
+    AniCraft Web is a community-maintained Docker image that provides AniCraft, an open-source 2D animation editor, through a native browser-based interface.
+    Unlike desktop-in-a-container solutions that require accessing a remote Linux desktop, this version serves AniCraft's WebAssembly application directly to your browser. No Linux desktop environment, remote desktop session, or GPU passthrough is required.
+    Animation editing and rendering run on the user's device inside a modern web browser. Open and import projects using the browser's file picker, create and edit 2D animations, then save or export the results as browser downloads.
+    The container only serves the web application. No database or persistent project-storage volume is required. Browser-based recovery and preferences rely on the browser's local storage.
+    Some desktop features, including video export and sound playback, are not yet available in the web version.
+    Ideal for Unraid users who want a straightforward, browser-native AniCraft experience without running a remote Linux desktop.
+  </Overview>
+
+  <Project>https://github.com/storytold/anicraft</Project>
+
+  <TemplateURL>https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/templates/anicraft-web.xml</TemplateURL>
+
+  <ReadMe>https://github.com/MikaPST/anicraft-web/blob/main/README.md</ReadMe>
+
+  <Category>Tools:Utilities</Category>
+
+  <ExtraSearchTerms>
+    AniCraft Ani Craft Animation Editor 2D Animation Animator Timeline Vector Animation Browser WebAssembly ArtCraft
+  </ExtraSearchTerms>
+
+  <Requires>
+    No special privileges or persistent data volumes are required. The web interface is served over HTTP by the container. For access from another device, HTTPS is recommended because browser features such as autosave rely on secure contexts. When using a reverse proxy such as Traefik, configure HTTPS and forward requests to the container HTTP port.
+  </Requires>
+
+  <Changes>
+    Initial release - AniCraft Web
+  </Changes>
+
+  <Date>2026-11-13</Date>
+
+  <MinVer>6.1</MinVer>
+
+  <License>MIT OR Apache-2.0</License>
+
+  <!-- ========================= -->
+  <!-- ANICRAFT WEB HTTP PORT     -->
+  <!-- ========================= -->
+
+  <Config
+    Name="HTTP Port"
+    Target="8080"
+    Default="8080"
+    Mode="tcp"
+    Description="Port used to access the AniCraft Web interface."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  />
+
+</Container>
