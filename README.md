@@ -301,6 +301,29 @@ A browser-based design application packaged as a static WebAssembly frontend and
 <br clear="all">
 
 
+### AniCraft Web
+
+<img src="https://raw.githubusercontent.com/MikaPST/unraid-community-apps/main/icons/icon-anicraft-web.png" width="84" align="left" alt="AniCraft Web">
+
+**[AniCraft Web](https://github.com/storytold/anicraft)**  
+A browser-based 2D animation editor served by a community-maintained Docker image. The container serves AniCraft's WebAssembly application through NGINX; animation editing and rendering run directly in the browser rather than in a remote desktop environment.
+
+<div style="clear: left; padding-top: 12px;"><a href="https://github.com/MikaPST/anicraft-web/blob/main/README.md"><img src="https://img.shields.io/badge/Documentation-Read%20the%20guide-393939?style=for-the-badge&logo=github&logoColor=white" alt="AniCraft Web documentation"></a>&nbsp;
+<a href="templates/anicraft-web.xml"><img src="https://img.shields.io/badge/Unraid%20Template-XML-1d63ed?style=for-the-badge&logo=docker&logoColor=white" alt="AniCraft Web XML template"></a>
+<a href="https://github.com/MikaPST/anicraft-web/blob/main/docker-compose.yml"><img src="https://img.shields.io/badge/Docker%20Compose-YAML-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="AniCraft Web Docker Compose file"></a></div>
+<details>
+  <summary><strong>Quick information</strong></summary>
+
+  - **Category:** Media / 2D Animation
+  - **Docker image:** `ghcr.io/mikapst/anicraft-web:latest`
+  - **Container port:** `8080` (Unraid host port defaults to `8080`)
+  - **Persistent application volume:** Not required for the standard deployment
+  - **Packaging:** Community-maintained by MikaPST; not an official AniCraft image
+</details>
+
+<br clear="all">
+
+
 ### TextureCraft Web
 
 <img src="https://raw.githubusercontent.com/storytold/texturecraft/main/assets/app-icon/hicolor/256x256/apps/ai.storyteller.texturecraft.png" width="84" align="left" alt="TextureCraft Web">
