@@ -39,7 +39,7 @@ Docker-aware middleware that can start and stop containers based on incoming req
   <summary><strong>Quick information</strong></summary>
 
   - **Category:** Docker / FinOps
-  - **Docker image:** `sablierapp/sablier:1.18.0`
+  - **Docker image:** `sablierapp/sablier:1.21.1`
   - **Default port:** `10000`
   - **Upstream license:** Apache-2.0
 </details>
